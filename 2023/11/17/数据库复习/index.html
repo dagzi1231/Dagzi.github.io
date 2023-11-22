@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据库 | Dagzi's Blog</title><meta name="author" content="Dagzi"><meta name="copyright" content="Dagzi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这里主要是复习的时候听着网课重新做一遍笔记。  # 绪论 # 介绍 # 数据库系统概述 # 数据 数据是数据库中存储的基本对象。 [定义] 计算机用来描述事物的符号记录（文字．图形．图像．声音）  数据的形式本身并不能完全表达其内容，需要经过语义解释。数据与其语义是不可分的  # 数据库 DB  数据库是长期存储在计算机内有结构的大量的共享的数据集合。  # 数据库管理系统 DBMS [定义]">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据库 | Dagzi's Blog</title><meta name="author" content="Dagzi"><meta name="copyright" content="Dagzi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这里主要是复习的时候听着网课重新做一遍笔记。  # 一，绪论 # 介绍 # 数据库系统概述 # 数据 数据是数据库中存储的基本对象。 [定义] 计算机用来描述事物的符号记录（文字．图形．图像．声音）  数据的形式本身并不能完全表达其内容，需要经过语义解释。特点：数据与其语义是不可分的  # 数据库 DB  数据库是长期存储在计算机内有结构的大量的共享的数据集合。（有组织，可共享）  # 数据库管">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库">
 <meta property="og:url" content="https://dagzi1231.github.io/2023/11/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/index.html">
 <meta property="og:site_name" content="Dagzi&#39;s Blog">
-<meta property="og:description" content="这里主要是复习的时候听着网课重新做一遍笔记。  # 绪论 # 介绍 # 数据库系统概述 # 数据 数据是数据库中存储的基本对象。 [定义] 计算机用来描述事物的符号记录（文字．图形．图像．声音）  数据的形式本身并不能完全表达其内容，需要经过语义解释。数据与其语义是不可分的  # 数据库 DB  数据库是长期存储在计算机内有结构的大量的共享的数据集合。  # 数据库管理系统 DBMS [定义]">
+<meta property="og:description" content="这里主要是复习的时候听着网课重新做一遍笔记。  # 一，绪论 # 介绍 # 数据库系统概述 # 数据 数据是数据库中存储的基本对象。 [定义] 计算机用来描述事物的符号记录（文字．图形．图像．声音）  数据的形式本身并不能完全表达其内容，需要经过语义解释。特点：数据与其语义是不可分的  # 数据库 DB  数据库是长期存储在计算机内有结构的大量的共享的数据集合。（有组织，可共享）  # 数据库管">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:published_time" content="2023-11-17T09:59:31.981Z">
-<meta property="article:modified_time" content="2023-11-20T14:44:27.615Z">
+<meta property="article:modified_time" content="2023-11-22T12:17:21.623Z">
 <meta property="article:author" content="Dagzi">
 <meta property="article:tag" content="数据库">
 <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2023-11-20 22:44:27'
+  postUpdate: '2023-11-22 20:17:21'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -154,21 +154,21 @@
       }
       detectApple()
     })(window)</script><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="Dagzi's Blog" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-spinner"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/3.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Dagzi's Blog"><span class="site-name">Dagzi's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-spinner"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据库</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-17T09:59:31.981Z" title="发表于 2023-11-17 17:59:31">2023-11-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-20T14:44:27.615Z" title="更新于 2023-11-20 22:44:27">2023-11-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数据库"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-spinner"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/3.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Dagzi's Blog"><span class="site-name">Dagzi's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-spinner"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据库</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-17T09:59:31.981Z" title="发表于 2023-11-17 17:59:31">2023-11-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-22T12:17:21.623Z" title="更新于 2023-11-22 20:17:21">2023-11-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数据库"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
 <p>这里主要是复习的时候听着网课重新做一遍笔记。</p>
 </blockquote>
-<h1 id="绪论"><a class="markdownIt-Anchor" href="#绪论">#</a> 绪论</h1>
+<h1 id="一绪论"><a class="markdownIt-Anchor" href="#一绪论">#</a> 一，绪论</h1>
 <h2 id="介绍"><a class="markdownIt-Anchor" href="#介绍">#</a> 介绍</h2>
 <h3 id="数据库系统概述"><a class="markdownIt-Anchor" href="#数据库系统概述">#</a> 数据库系统概述</h3>
 <h4 id="数据"><a class="markdownIt-Anchor" href="#数据">#</a> 数据</h4>
 <p>数据是数据库中存储的基本对象。<br>
 <strong>[定义]</strong> 计算机用来描述事物的符号记录（文字．图形．图像．声音）</p>
 <ul>
-<li>数据的形式本身并不能完全表达其内容，需要经过语义解释。数据与其语义是不可分的</li>
+<li>数据的形式本身并不能完全表达其内容，需要经过语义解释。<strong>特点：数据与其语义是不可分的</strong></li>
 </ul>
 <h4 id="数据库-db"><a class="markdownIt-Anchor" href="#数据库-db">#</a> 数据库 DB</h4>
 <ul>
-<li>数据库是长期存储在计算机内有结构的大量的共享的数据集合。</li>
+<li>数据库是长期存储在计算机内有结构的大量的共享的数据集合。（<strong>有组织，可共享</strong>）</li>
 </ul>
 <h4 id="数据库管理系统-dbms"><a class="markdownIt-Anchor" href="#数据库管理系统-dbms">#</a> 数据库管理系统 DBMS</h4>
 <p><strong>[定义]</strong> 数据库管理系统是位于用户与操作系统之间的一层数据管理软件。<br>
@@ -255,18 +255,40 @@
  A 中的一个实体，B 中有 n 歌实体与之联系，但是 B 中每一个实体在 A 中最多只有一个实体联系。<br>
 【例】一个班级有若干名学生，学生之恶能在一个班级学习。<br>
 <strong>3，多对多</strong><br>
- A 中的每一个实体，B 中有多个，反之也是一样。</li>
+ A 中的每一个实体，B 中有多个，反之也是一样。<br>
+<strong>三，概念模型得表示方法：实体 - 联系方法</strong><br>
+实体联系方法用 E-R 图来描述现实世界得概念模型，所刻画的某些也称为 E-R 模型。</li>
+</ul>
+<h4 id="数据模型得组成要素"><a class="markdownIt-Anchor" href="#数据模型得组成要素">#</a> 数据模型得组成要素</h4>
+<ul>
+<li>数据结构：数据结构是所研究得对象类型得集合</li>
+<li>数据操作：对数据库得对象（型）的实例（值）进行操作（查询，更新）</li>
+<li>数据的完整性约束条件：实体完整性，参照完整性。满足条件来保证数据的正确性，有效性和相容性</li>
 </ul>
 <h3 id="数据库系统结构"><a class="markdownIt-Anchor" href="#数据库系统结构">#</a> 数据库系统结构</h3>
 <h4 id="数据库系统模式概念"><a class="markdownIt-Anchor" href="#数据库系统模式概念">#</a> 数据库系统模式概念</h4>
+<p><strong>（1）型和值</strong></p>
 <ul>
-<li>模式：是数据库中全体数据得逻辑结构和特征得描述，同一个模式可以有多个实例。</li>
-<li>外模式：数据库用户能看见和使用得局部数据得逻辑结构和特征得描述，是数据库用户得数据视图，与某一应用有关的数据的逻辑表示。</li>
+<li><strong>型 (type)：对某一类数据的结构和属性的说明</strong></li>
+<li><strong>值 (value)：是型的一个具体赋值</strong><br>
+<strong>（2）模式和实例</strong><br>
+<strong>模式 (schema)：是数据库逻辑结构和特征的描述</strong></li>
+<li>是<strong>型的描述</strong></li>
+<li>反应的是<strong>数据的结构及其联系</strong></li>
+<li>模式<strong>相对稳定</strong><br>
+<strong>实例 (instance)：模式的一个具体值</strong></li>
+<li>反映数据库<strong>某一时刻的状态</strong></li>
+<li>同一个模式<strong>可以有很多实例</strong></li>
+<li>实例随数据中的数据的<strong>更新而变动</strong><br>
+<strong>（3）三级模式</strong></li>
+<li>模式：是数据库中全体数据得逻辑结构和特征得描述，同一个模式可以有多个实例。一个数据库只有一个模式。</li>
+<li>外模式：数据库用户能看见和使用得局部数据得逻辑结构和特征得描述，是数据库用户得数据视图，与某一应用有关的数据的逻辑表示。<strong>外模式通常是模式的一个子集</strong>，所以模式与外模式的关系为<strong>一对多</strong>。</li>
 <li>内模式：也称存储模式，是数据物理结构和存储方式的描述，是数据在数据库内部的组织方式。<br>
-模式 / 内模式有映像：保证数据与程序的逻辑独立性<br>
-外模式 / 模式有映像：定义全局逻辑结构和存储结构之间的对应关系，保证数据和程序的物理独立性</li>
+<strong>（4）二级映像</strong><br>
+模式 / 内模式有映像：保证数据与程序的逻辑独立性。<strong>当数据库的存储结构改变时 (例如选用了另一种存储结构)，由数据库管理员对模式 / 内模式映像作相应改变，可以使模式保持不变。从而应用程序不必改变，保证了数据与程序的物理独立性，简称数据的物理独立性</strong>。</li>
 </ul>
-<h1 id="关系数据库"><a class="markdownIt-Anchor" href="#关系数据库">#</a> 关系数据库</h1>
+<p>外模式 / 模式有映像：定义全局逻辑结构和存储结构之间的对应关系，保证数据和程序的物理独立性。<strong>当模式改变时 (例如增加新的关系、新的属性、改变属性的数据类型等)，由数据库管理员对各个外模式 / 模式的映像作相应改变，可以使外模式保持不变。应用程序是依据数据的外模式编写的，从而应用程序不必修改，保证了数据与程序的逻辑独立性，简称数据的逻辑独立性</strong>。</p>
+<h1 id="二关系数据库"><a class="markdownIt-Anchor" href="#二关系数据库">#</a> 二，关系数据库</h1>
 <h3 id="关系"><a class="markdownIt-Anchor" href="#关系">#</a> 关系</h3>
 <p>单一的数据结构 — 关系<br>
 逻辑结构 — 二维表<br>
@@ -284,9 +306,9 @@
 若 $D_i$ 为有限集，其基数为 $m_i$，则 $D_1$ × $D_2$ … $D_n$ 的基数为 M = $\prod_{i=1}<rp>【</rp><rt>{n</rt><rp>】</rp></ruby>$$m_i$</p>
 <h4 id="码"><a class="markdownIt-Anchor" href="#码">#</a> 码</h4>
 <ul>
-<li>候选码：若关系中的某一属性组能唯一标识一个元组，则称该属性组为候选码。</li>
+<li>候选码：若关系中的某一属性组能唯一标识一个元组，而其子集不能，则称该属性组为候选码。</li>
 <li>全码（ALL-key）：最极端的情况，关系模式的所有属性共同构成这个关系模式的候选码，称为全码。</li>
-<li>主码：若一个关系有多个候选码，则选定一个作为主码（Primary key）。</li>
+<li>主码：若一个关系有多个候选码，则选定一个作为主码（Primary key）。能够唯一标识一条记录的<strong>最小属性集</strong>。</li>
 <li>主属性：候选码的诸个属性称为主属性</li>
 <li>非主属性：不包含在任何候选码中的属性 （或者说非码属性）。</li>
 </ul>
@@ -294,27 +316,36 @@
 <ul>
 <li>基本关系 (基本表)：实际存在的表，是实际存储数据的逻辑表示</li>
 <li>查询表：查询结果对应的表</li>
-<li>视图表：有基本表或者其他视图表导出的表，是虚表，不对应实际存储的数据。</li>
+<li>视图表：有基本表或者其他视图表导出的表，<strong>是虚表</strong>，不对应实际存储的数据。</li>
 </ul>
 <h4 id="关系模式"><a class="markdownIt-Anchor" href="#关系模式">#</a> 关系模式</h4>
 <p>【定义】 是对关系的描述。关系模式是型，关系是值。 关系模式是静态的。<br>
-关系的形式化表示：R (U, D, dom, F)  R：关系名  U：组成该关系的属性集合  DOM：属性项域的映像集合 F：属性间的数据依赖关系集合</p>
-<h4 id="关系数据库-2"><a class="markdownIt-Anchor" href="#关系数据库-2">#</a> 关系数据库</h4>
+关系的形式化表示：R (U, D, dom, F)<br>
+ R：关系名  U：组成该关系的属性集合  DOM：属性项域的映像集合 F：属性间的数据依赖关系集合</p>
+<h4 id="关系数据库"><a class="markdownIt-Anchor" href="#关系数据库">#</a> 关系数据库</h4>
 <p>一个给定的应用领域中，所有关系的集合构成一个关系数据库。</p>
 <h3 id="关系的完整性"><a class="markdownIt-Anchor" href="#关系的完整性">#</a> 关系的完整性</h3>
-<p><strong>关系模型中有三类完整性约束：实体完整性，参照完整性，用户定义的完整性。</strong></p>
+<p>【定义】: <strong>关系模型中有三类完整性约束：实体完整性，参照完整性，用户定义的完整性。</strong></p>
 <h4 id="实体完整性"><a class="markdownIt-Anchor" href="#实体完整性">#</a> 实体完整性</h4>
 <p>是指若属性 A 是基本关系 R 的主属性，则 A 不能取空值。<br>
 <strong>实体完整性规则的说明:</strong><br>
 （1）主码不能为空值。（所有的主属性都不能取空值）<br>
 （2）两个元素的主码不能相同。</p>
 <h4 id="参照完整性"><a class="markdownIt-Anchor" href="#参照完整性">#</a> 参照完整性</h4>
-<p>这里介绍一下<strong>外码</strong>。<br>
+<p>这里介绍一下<strong>外码 / 外键</strong>。<br>
 定义：设 F 是基本关系 R 的一个或一组属性，但不是关系 R 的码。如果 F 与基本关系 S 的主码<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">K_s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 相对应，则称 F 是基本关系 S 的外码。 基本关系 R 为参照关系，基本关系 S 为被参照关系。<br>
 <strong>参照完整性规则：</strong><br>
-对于 R 上每个元组在 F 上的取值：要么取控制，要么等于 S 中某个元组的主码值。</p>
+对于 R 上每个元组在 F 上的取值：要么取空值，要么等于 S 中某个元组的主码值。<br>
+例如有如下两个关系：</p>
+<ul>
+<li>部门 (<u>部门号</u>，部门名，电话)</li>
+<li>雇员 (<u>雇员号</u>，雇员名，职称，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><munder><mo><mtext>部门号</mtext></mo><mo lspace="0em" rspace="0em">∼</mo></munder></mi></mrow><annotation encoding="application/x-tex">\underset{\sim}{部门号}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.38333em;vertical-align:-0.7em;"></span><span class="mord"><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.68333em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mrel mtight">∼</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop"><span class="mord cjk_fallback">部门号</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span></span></span></span></span>)<br>
+ 这里得部门号即外码，可以取部门中部门号得取值或者空值。<br>
+值得注意的是，外键可能来自同一关系，也就是被参照关系就是参照关系。<br>
+Students(<u>sid</u>, name, login, age, gpa, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><munder><mo><mi>p</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>n</mi><mi>e</mi><mi>r</mi></mo><mo lspace="0em" rspace="0em">∼</mo></munder></mi></mrow><annotation encoding="application/x-tex">\underset{\sim}{partner}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.50952em;vertical-align:-0.89444em;"></span><span class="mord"><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.61508em;"><span style="top:-2.20556em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mrel mtight">∼</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop"><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">t</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.02778em;">er</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.89444em;"><span></span></span></span></span></span></span></span></span></span>), partner 是 对 sid 的一个外键约束，一个学生可能没有同伴，故其可以取空，相应的，对于课程，当一门课程没有前期课程时，preq 可以为空，空值并不违反外键约束</li>
+</ul>
 <h4 id="用户定义的完整性"><a class="markdownIt-Anchor" href="#用户定义的完整性">#</a> 用户定义的完整性</h4>
-<p>这里就是自己对数据加上域，添加约束。</p>
+<p>这里就是自己对数据加上域，即添加约束。用户自定义完整性 1 针对某一具体关系数据库的约束条件，反映<strong>某一具体应用所涉及的数据必须满足的语义要求</strong>，例如某个属性必须取唯一值，某个非主属性不能取空值等等.</p>
 <h3 id="关系代数"><a class="markdownIt-Anchor" href="#关系代数">#</a> 关系代数</h3>
 <h4 id="传统的集合运算"><a class="markdownIt-Anchor" href="#传统的集合运算">#</a> 传统的集合运算</h4>
 <p>注意这里默认 R 和 S 都有相同的目 n（都具有 n 个属性）<br>
@@ -335,11 +366,421 @@
 <strong>3，连接运算</strong><br>
  R 和 S 进行连接运算的结果：从 R 和 S 的广义笛卡尔积 R × S 中选取 (R 关系) 在 A 属性组上的值与（S 关系）在 B 属性组上值满足关系 θ 的元组。</p>
 <ul>
-<li>等值连接：从关系 R 和 S 的广义笛卡尔积中找到 A 和 B 属性相等的那些元组。（A 和 B 可以不是同一个属性）</li>
-<li>自然连接：是一种特殊的等值连接，R 和 S 中具有相同属性组 B，在结果结果中把重复的属性列去掉。<br>
+<li>等值连接：从关系 R 和 S 的广义笛卡尔积中找到 A 和 B 属性相等的那些元组。（A 和 B 可以不是同一个属性）。<strong>这里没有去掉重复列。</strong></li>
+<li>自然连接：是一种特殊的等值连接，R 和 S 中具有相同属性组 B，<strong>在结果结果中把重复的属性列去掉</strong>。</li>
+<li>外连接：悬浮元组的概念：R 和 S 在做自然连接时，R 中某些元组有可能在 S 中不存在公共属性上值相等的元组，就会造成 R 中这些元组在操作时被舍弃（反过来 S 也是这样）。<br>
 <strong>4，除运算</strong><br>
 这里先给出<strong>象集</strong>的定义：当在 R 关系中属性 A 取 x 值时，其他属性例如 B 可以取什么值，这个取得值得集合称为 1 象集。<br>
 R÷S={tr [X]| tr∈R 并且<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>π</mi><mi>y</mi></msub></mrow><annotation encoding="application/x-tex">\pi_y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>(S)<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⊆</mo></mrow><annotation encoding="application/x-tex">\subseteq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">⊆</span></span></span></span> Yx}<br>
  那么 R 除 S，假设 R 中 得 B,C 属性 是 R 和 S 共同属性，那么就找 A 中哪个 A 得元素得象集能包含 S 中所有得 B，C 得取值得。</li>
 </ul>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://dagzi1231.github.io">Dagzi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://dagzi1231.github.io/2023/11/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/">https://dagzi1231.github.io/2023/11/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://dagzi1231.github.io" target="_blank">Dagzi's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/11/19/MarkDown%E8%AF%AD%E6%B3%95/" title="MarkDown语法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">MarkDown语法</div></div></a></div><div class="next-post pull-right"><a href="/2023/11/15/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" title="算法学习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">算法学习</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Dagzi</div><div class="author-info__description">hello!</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/dagzi1231"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%AA%E8%AE%BA"><span class="toc-number">1.</span> <span class="toc-text"> 绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.1.</span> <span class="toc-text"> 介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 数据库系统概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE"><span class="toc-number">1.1.1.1.</span> <span class="toc-text"> 数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93-db"><span class="toc-number">1.1.1.2.</span> <span class="toc-text"> 数据库 DB</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F-dbms"><span class="toc-number">1.1.1.3.</span> <span class="toc-text"> 数据库管理系统 DBMS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F-dbs"><span class="toc-number">1.1.1.4.</span> <span class="toc-text"> 数据库系统 DBS</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E6%8A%80%E6%9C%AF%E7%9A%84%E5%8F%91%E5%B1%95"><span class="toc-number">1.1.2.</span> <span class="toc-text"> 数据管理技术的发展</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text"> 数据模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%BB%84%E6%88%90%E5%85%83%E7%B4%A0"><span class="toc-number">1.2.0.1.</span> <span class="toc-text"> 数据模型的组成元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.2.0.2.</span> <span class="toc-text"> 概念模型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 数据库系统结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%BC%8F%E6%A6%82%E5%BF%B5"><span class="toc-number">1.2.1.1.</span> <span class="toc-text"> 数据库系统模式概念</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.</span> <span class="toc-text"> 关系数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB"><span class="toc-number">2.0.1.</span> <span class="toc-text"> 关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">2.0.1.1.</span> <span class="toc-text"> 概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A0%81"><span class="toc-number">2.0.1.2.</span> <span class="toc-text"> 码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E7%B1%BB%E5%85%B3%E7%B3%BB"><span class="toc-number">2.0.1.3.</span> <span class="toc-text"> 三类关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.0.1.4.</span> <span class="toc-text"> 关系模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93-2"><span class="toc-number">2.0.1.5.</span> <span class="toc-text"> 关系数据库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-number">2.0.2.</span> <span class="toc-text"> 关系的完整性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BD%93%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-number">2.0.2.1.</span> <span class="toc-text"> 实体完整性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E7%85%A7%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-number">2.0.2.2.</span> <span class="toc-text"> 参照完整性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%AE%9A%E4%B9%89%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-number">2.0.2.3.</span> <span class="toc-text"> 用户定义的完整性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0"><span class="toc-number">2.0.3.</span> <span class="toc-text"> 关系代数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E7%9A%84%E9%9B%86%E5%90%88%E8%BF%90%E7%AE%97"><span class="toc-number">2.0.3.1.</span> <span class="toc-text"> 传统的集合运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%93%E9%97%A8%E7%9A%84%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97"><span class="toc-number">2.0.3.2.</span> <span class="toc-text"> 专门的关系运算</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/20/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93STL%EF%BC%88%E4%BB%8B%E7%BB%8D%EF%BC%89/" title="C++ STL 学习">C++ STL 学习</a><time datetime="2023-11-20T04:29:02.610Z" title="发表于 2023-11-20 12:29:02">2023-11-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/19/MarkDown%E8%AF%AD%E6%B3%95/" title="MarkDown语法">MarkDown语法</a><time datetime="2023-11-19T15:01:52.646Z" title="发表于 2023-11-19 23:01:52">2023-11-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/" title="数据库">数据库</a><time datetime="2023-11-17T09:59:31.981Z" title="发表于 2023-11-17 17:59:31">2023-11-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/15/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" title="算法学习">算法学习</a><time datetime="2023-11-15T15:39:26.772Z" title="发表于 2023-11-15 23:39:26">2023-11-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/13/DFS--%E5%A4%8D%E4%B9%A0/" title="DFS--复习">DFS--复习</a><time datetime="2023-11-13T10:06:06.350Z" title="发表于 2023-11-13 18:06:06">2023-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Dagzi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
+<h1 id="三关系数据库标准语言sql"><a class="markdownIt-Anchor" href="#三关系数据库标准语言sql">#</a> 三，关系数据库标准语言 SQL</h1>
+<p><strong>语法说明:</strong></p>
+<blockquote>
+<p><strong>&lt;&gt;</strong>：尖括号用于分隔字符串<br>
+<strong> []</strong>：方括号表示规则中的可选元素，可以选择也可以省略<br>
+<strong> {}</strong>：花括号表示聚集规则中的元素，必须明确指定</p>
+</blockquote>
+<h4 id="1模式得定义和删除"><a class="markdownIt-Anchor" href="#1模式得定义和删除">#</a> 1，模式得定义和删除</h4>
+<p>1，定义模式：CREATE SCHEMA &lt;模式名&gt; AUTHORIZATION &lt; 用户名 &gt;; 若没有指定模式名 则默认为用户名。<br>
+2，删除模式：DROP SCHEMA &lt;模式名&gt; &lt;CASCADE|RESTRICT&gt;;<br>
+①CASCADE 和 RESTRICT 必须二选一。<br>
+②CASCADE (级联删除)<br>
+③RESTRICT (限制删除)</p>
+<h4 id="2基本表的定义删除和修改"><a class="markdownIt-Anchor" href="#2基本表的定义删除和修改">#</a> 2，基本表的定义，删除和修改</h4>
+<p><strong>1, 创建基本表</strong><br>
+ CREATE TABLE &lt;表名&gt; (&lt; 列名 &gt;&lt; 数据类型 &gt;[&lt; 列级完整性约束条件 &gt;][,&lt; 列名 &gt;&lt; 数据类型 &gt;[&lt; 列级完整性约束条件 &gt;]]…[,&lt; 表级完整性约束条件 &gt;]);</p>
+<ul>
+<li><strong>如果完整性约束条件涉及该表的多个属性列，则必须定义在表级上，否则既可以在列级上也可以在表级上</strong><br>
+【例 3】：建立学生选课表 <code>SC</code> ，其中 <code>Sno</code>  和 <code>Cno</code>  是外码，分别参照 <code>Student</code>  表的 <code>Sno</code>  列和 <code>Course</code>  表的 <code>Cno</code>  列</li>
+<li><code>Sno</code>  和 <code>Cno</code>  是 <code>SC</code>  的主码，必须使用表级完整性定义</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE SC</span><br><span class="line">(</span><br><span class="line">	Sno CHAR(9),</span><br><span class="line">	Cno CHAR(4),</span><br><span class="line">	Grade SMALLINT,</span><br><span class="line"></span><br><span class="line">	PRIMARY KEY(Sno,Cno),//必须使用表级完整性定义</span><br><span class="line">	FOREIGN KEY(Sno) REFERENCES Student(Sno),</span><br><span class="line">	FOREIGN KEY(Cno) REFERENCES Course(Cno)</span><br><span class="line">)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>2，修改基本表</strong><br>
+<img src="https://img-blog.csdnimg.cn/ee787b17b1e44ecdb4361f8f76c1b841.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5b-r5LmQ5rGf5rmW,size_20,color_FFFFFF,t_70,g_se,x_16" alt="修改"></p>
+<ul>
+<li><strong> <code>ADD</code> ：用于增加新列，新的列级完整性约束条件和新的表级完整性约束条件</strong></li>
+<li><strong> <code>DROP COLUMN</code> ：用于删除表中的列</strong></li>
+<li><strong> <code>DROP CONSTRAINT</code> ：用于删除指定的完整性约束条件</strong></li>
+<li><strong> <code>ALTER COLUMN</code> ：用于修改原有的列定义</strong><br>
+<strong>（3）删除基本表</strong><br>
+<img src="https://img-blog.csdnimg.cn/fae55e92650e4bfa91e8ccc3a99de49c.png" alt="删除"></li>
+<li><strong>选择 <code>RESTRICT</code> </strong>：欲删除的基本表不能被其他表的约束所引用（比如 CHECK、FOREIGN KEY 等）、不能有视图、不能有触发器（trigger），不能有存储过程或函数等</li>
+<li><strong>选择 <code>CASCADE</code> </strong>：没有限制条件，所有相关依赖对象连同基本表一起删除<br>
+<strong> 3，创建索引</strong><br>
+<strong>作用：建立索引是加快查询速度的有效手段</strong> ： 数据库索引类似于图书后面的索引，能快速定位需要查询的内容。下面是索引的类型：</li>
+<li>顺序文件上的索引</li>
+<li>B + 树索引</li>
+<li>散列索引</li>
+<li>位图索引</li>
+</ul>
+<p><strong>（1）建立索引</strong><br>
+<img src="https://img-blog.csdnimg.cn/dbd9b112a0054167bb3c84d78de6ce81.png" alt="索引"></p>
+<ul>
+<li>&lt;表名&gt;：要建立索引的基本表的名字</li>
+<li>索引可以建立在该表的一列或多列上，各列之间使用逗号分隔</li>
+<li>每个 &lt;列名&gt; 后面还可以用 &lt; 次序 &gt; 指定索引值的排列次序，可选 ASC - 升序（默认）或 DESC - 降序</li>
+<li>UNIQUE：表明此索引的每一个索引值只对应唯一的数据记录</li>
+<li>CLUSTER：表示需要建立聚簇索引 - 一个基本表只能有一个聚簇索引，最快的，但应该在查询多而修改少的表中建立（第七章会讲到）<br>
+<strong>（2）修改索引</strong><br>
+ ALTER INDEX &lt;旧索引名&gt; RENAME TO &lt; 新索引名 &gt;;<br>
+<strong>（3）删除索引</strong><br>
+ DROP INDEX &lt;索引名&gt;;</li>
+</ul>
+<h5 id="span-idlable附加数据字典span"><a class="markdownIt-Anchor" href="#span-idlable附加数据字典span">#</a> <span id="lable">附加：数据字典</span></h5>
+<p>这里提一下一个概念，数据字典。</p>
+<ul>
+<li>关系数据库管理系统内部的一组系统表。</li>
+<li>记录了数据库所有的定义信息，包括模式定义，视图定义，索引定义，完整性约束定义，各类用户对数据库的操作权限，统计信息等。</li>
+<li>RDBMS 执行 SQL 数据定义时，实际上就是更新数据字典。</li>
+</ul>
+<h3 id="基本表的查询"><a class="markdownIt-Anchor" href="#基本表的查询">#</a> 基本表的查询</h3>
+<p><strong>SELECT 语句含义：根据 WHERE 子句的条件表达式从 FROM 子句指定的表、视图中找出满足条件的元组，再按照 SELECT 子句中的目标列表达式选出元组中的属性值形成结果表。如果有：</strong></p>
+<ul>
+<li><strong>GROUP BY：结果按 &lt;列名 1&gt; 的值进行分组，该属性列值相等的元组为一个组；通常会在每组中作用聚集函数；如果该子句还携带 HAVING 短语，则只有满足指定条件的组才予以输出</strong></li>
+<li><strong>ORDER BY：结果表还要按 &lt;列名 2&gt; 的值的升序或降序排序</strong><br>
+<img src="https://img-blog.csdnimg.cn/fbe8bc8bf0624ef7b2f367769c4a0b4e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5b-r5LmQ5rGf5rmW,size_20,color_FFFFFF,t_70,g_se,x_16" alt="select语句"></li>
+</ul>
+<h4 id="一单表查询"><a class="markdownIt-Anchor" href="#一单表查询">#</a> 一，单表查询</h4>
+<p><strong>（1）查询若干列</strong><br>
+ A：查询指定列</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT Sname,Sage from Student;</span><br></pre></td></tr></table></figure>
+<p>B：查询全部列 使用 * 来查询全部列<br>
+ C：查询经过计算的值 可以利用算术表达式<br>
+<strong>（2）查询若干行</strong><br>
+ A：消除取值重复的行（DISTINCT）<br>
+<strong>语法：前面说过投影操作可能会导致相同的行出现所以其结果必须消除重复行。可以使用 <code>DISTINCT</code>  消除</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT Sno from SC;</span><br></pre></td></tr></table></figure>
+<p>B：查询满足条件的元组<br>
+通过 WHERE 语句实现，常见的查询条件如下：<br>
+<img src="https://img-blog.csdnimg.cn/a3c32c0cd68a43fe8ec27a5be039c2fa.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5b-r5LmQ5rGf5rmW,size_20,color_FFFFFF,t_70,g_se,x_16" alt="查询条件"><br>
+这里用 like 进行字符匹配时有两个通配符</p>
+<blockquote>
+<p>%： 任意长度的字符串。例如: A% b ----------- acb,addgb,ab,…<br>
+_  ：任意单个字符。例如 a_b ----------- acb,adb,…</p>
+</blockquote>
+<p>这里还要注意一下转义字符： <code>\</code>  这个字符用来转移_ 和 % 例如查询 DB_DESIGN，查询时需要用  <code>LIKE 'DB\_DESIGN'</code>  防止_自动识别任意字符。<br>
+<strong>（3）ORDER BY 语句</strong><br>
+<strong>语法：ORDER BY 子句对查询结果按照一个或多个属性列进行排序</strong></p>
+<ul>
+<li>ASC - 升序（默认）</li>
+<li>DESC - 降序<br>
+这里给一个例子：查询选修了 3 号课程的学生的学号及其成绩，查询结果按分数降序排列</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT Sno,Grade</span><br><span class="line">from SC</span><br><span class="line">WHERE Cno=&#x27;3&#x27;</span><br><span class="line">ORDER BY Grade DESC;   --降序排列</span><br></pre></td></tr></table></figure>
+<p><strong>（4）聚集函数</strong><br>
+<img src="https://img-blog.csdnimg.cn/03b2cab78c434dafb90f6accf809a5a9.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5b-r5LmQ5rGf5rmW,size_20,color_FFFFFF,t_70,g_se,x_16" alt="语法如下"><br>
+这里只给出一个例子：查询选修 2 号课程的学生最高分数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT Sno,MAX(Grade)</span><br><span class="line">FROM SC </span><br><span class="line">WHERE Cno=&#x27;2&#x27;;</span><br></pre></td></tr></table></figure>
+<p><strong>（5）GROUP BY 子句</strong><br>
+<strong>语法：GROUP BY 子句将查询结果按某一列或多列的值分组，值相等的分为一组</strong></p>
+<ul>
+<li>分组目的是为了<strong>细化聚集函数的作用对象：若未分组，聚集函数将会作用于整个查询结果；若分组，聚集函数将会作用于每一个组，也即每一个组都有一个函数值</strong></li>
+<li>需要注意：<strong>WHERE 子句作用于整个表或视图，从中选择出满足条件的元组；HAVING 短语作用于组，从中选择满足条件的组</strong><br>
+这里举出一个例子说明 <code>GROUP BY</code>  的作用，如果我查询各个课程的选修人数，则我需要按照课程号先对每个课程进行分组，再在每一组查询 Sno。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT Cno,Count(Sno)</span><br><span class="line">FROM sc</span><br><span class="line">GROUP BY Cno;</span><br></pre></td></tr></table></figure>
+<p>如果我只想显示那些选修人数大于 1 以上的课程，则<strong>可以用 <code>HAVING</code>  语句，在组内进行筛选</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT Cno,Count(Sno)</span><br><span class="line">FROM sc</span><br><span class="line">GROUP BY Cno</span><br><span class="line">HAVING Count(Sno) &gt; 1;</span><br></pre></td></tr></table></figure>
+<h4 id="二连接查询查询时涉及多张表"><a class="markdownIt-Anchor" href="#二连接查询查询时涉及多张表">#</a> 二，连接查询（查询时涉及多张表）</h4>
+<p><strong>(1) 等值连接和非等值连接</strong><br>
+<strong>语法：在 WHERE 子句中写入连接条件（又叫做连接每谓词），其格式为</strong><br>
+<img src="https://img-blog.csdnimg.cn/04445338e11c4257b9e38b00ea959b88.png" alt="连接"><br>
+<strong>其中比较运算符有： <code>=</code> 、 <code>&gt;</code> 、 <code>&lt;</code> 、 <code>&gt;=</code> 、 <code>&lt;=</code> 、 <code>!=</code> </strong></p>
+<ul>
+<li><strong>当运算符为 <code>=</code>  时称之为等值连接</strong></li>
+<li><strong>当运算符不为 <code>=</code>  时称之为非等值连接</strong><br>
+例子：查询每个学生及其选修课程的情况</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT student.*,sc.*</span><br><span class="line">FROM student,sc</span><br><span class="line">WHERE student.Sno=sc.Sno;</span><br></pre></td></tr></table></figure>
+<p>例子：使用自然连接（即去掉重复列）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT student.Sno,Sname,Ssex,Sage,Sdept,Cno,Grade</span><br><span class="line">FROM student,sc</span><br><span class="line">WHERE student.sno=sc.sno;</span><br></pre></td></tr></table></figure>
+<p><strong>(2) 自身连接</strong><br>
+<strong>语法：所谓自身连接就是指一个表与自己连接</strong><br>
+例子：查询每一门课的先修课的先修课</p>
+<ul>
+<li>在 <code>Course</code>  表中有的只是每门课的直接先修课，要想得到先修课的先修课，那么就必须先找到一门课的先修课，然后再按此先修课的课程号查找它的先修课</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT ONE.Cno,TWO.Cpno</span><br><span class="line">FROM Course ONE,Course TWO</span><br><span class="line">WHERE ONE.Cpno=TWO.Cno;</span><br></pre></td></tr></table></figure>
+<p><strong>(3) 连接 JOIN</strong><br>
+<strong> 语法：SQL JOIN 用于把来自两个或多个表的行结合起来，其格式如下</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name(s)</span><br><span class="line">FROM TABLE1//左表</span><br><span class="line">&lt;某某 JOIN&gt;TABLE2//右表</span><br><span class="line">ON TABLE1.column_name=TABLE2.column_name</span><br></pre></td></tr></table></figure>
+<p><strong>有如下几类</strong>： 这里以查询学校内学生及雇员的情况。</p>
+<ul>
+<li><code>INNER JOIN</code> ( <code>JOIN</code> ) 既是学生，又是雇员。</li>
+<li><code>LEFT JOIN</code> ( <code>LEFT OUTER JOIN</code> ) 是学生，可以不是雇员。</li>
+<li><code>RIGHT JOIN</code> ( <code>RIGHT OUTER JOIN</code> ) 可以不是学生，但，是雇员</li>
+<li><code>FULL JOIN</code> ( <code>FULL OUTER JOIN</code> ) 可以不是学生，可以不是雇员。<br>
+<strong>A：INNER JOIN(JOIN)</strong><br>
+<strong> <code>INNER JOIN</code> ( <code>JOIN</code> )：关键字在表中存在至少一个匹配时返回行</strong><br>
+以 <code>sc</code>  和 <code>course</code>  的 <code>Cno</code>  作为比对标准，将相同连接在一起</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT Sno,sc.Cno,Grade,course.Cno,Cname,Cpno,Ccredit</span><br><span class="line">FROM sc INNER JOIN course ON(sc.Cno=course.Cno);</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/c4702afa17964fe89116980641e9253d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5b-r5LmQ5rGf5rmW,size_20,color_FFFFFF,t_70,g_se,x_16" alt="内连接展示"><br>
+<strong> B：LEFT JOIN (LEFT OUTER JOIN)</strong><br>
+<strong> <code>LEFT JOIN</code> ( <code>LEFT OUTER JOIN</code> )：以左表为标准，若右表中无匹配，则填 NULL</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT Sno,sc.Cno,Grade,course.Cno,Cname,Cpno,Ccredit</span><br><span class="line">FROM sc LEFT JOIN course ON(sc.Cno=course.Cno);</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/c45245514e184c8d83c6ceb1b84f0a4d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5b-r5LmQ5rGf5rmW,size_15,color_FFFFFF,t_70,g_se,x_16" alt="左外连接"><br>
+<strong> C：RIGHT JOIN (RIGHT OUTER JOIN)</strong><br>
+<strong> <code>RIGHT JOIN</code> ( <code>RIGHT OUTER JOIN</code> )：以右表为标准，若左表中无匹配，则填 NULL</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT Sno,sc.Cno,Grade,course.Cno,Cname,Cpno,Ccredit</span><br><span class="line">FROM sc RIGHT JOIN course ON(sc.Cno=course.Cno);</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/17c4bdf789b242eab9878687a482f149.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5b-r5LmQ5rGf5rmW,size_20,color_FFFFFF,t_70,g_se,x_16" alt="右外连接"><br>
+<strong> D：FULL JOIN (FULL OUTER JOIN)</strong><br>
+<strong> <code>FULL JOIN</code> ( <code>FULL OUTER JOIN</code> )：本质就是结合了 LEFT JOIN 和 RIGHT JOIN</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT Sno,sc.Cno,Grade,course.Cno,Cname,Cpno,Ccredit</span><br><span class="line">FROM sc FULL JOIN course ON(sc.Cno=course.Cno);</span><br></pre></td></tr></table></figure>
+<p><strong>(4) 符合条件连接</strong><br>
+<strong>语法：没有什么新的东西，就是涉及多张表，多个条件的查询</strong><br>
+<strong> (5) 集合操作的多关系查询</strong><br>
+集合操作主要有 union,intersect 和 except<br>
+ 且集合操作一般可以利用多条条件语句代替<br>
+<strong> A，UNION</strong><br>
+ 查询计算机系的学生以及年龄不大于 19 岁的学生</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">select *  </span><br><span class="line">from Students  </span><br><span class="line">where Sdept=‘CS’</span><br><span class="line">Union  </span><br><span class="line">select *  </span><br><span class="line">from Students  </span><br><span class="line">where Sage &lt;= 19;</span><br><span class="line">--上述等价于下述</span><br><span class="line">select *  </span><br><span class="line">from Students  </span><br><span class="line">where Sdept=‘CS’  </span><br><span class="line">or Sage &lt;= 19;</span><br></pre></td></tr></table></figure>
+<p><strong>B, INTERSECT</strong><br>
+ 查询计算机系的学生与年龄不大于 19 岁的学生的交集</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">select *  </span><br><span class="line">from Students  </span><br><span class="line">where Sdept=‘CS’  </span><br><span class="line">intersect  </span><br><span class="line">select *  </span><br><span class="line">from Students  </span><br><span class="line">where Sage&lt;=19;</span><br><span class="line">--上述等价于下述</span><br><span class="line">select *  </span><br><span class="line">from Students  </span><br><span class="line">where Sdept=‘CS’  </span><br><span class="line">and Sage &lt;= 19;</span><br></pre></td></tr></table></figure>
+<p><strong>C, EXCEPT</strong><br>
+ 查询计算机系的学生与年龄不大于 19 岁的学生的差集</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">select *  </span><br><span class="line">from Students  </span><br><span class="line">where Sdept=‘CS’  </span><br><span class="line">except  </span><br><span class="line">select *  </span><br><span class="line">from Students  </span><br><span class="line">where Sage&lt;=19;</span><br><span class="line">--上述等价于下述</span><br><span class="line">select *  </span><br><span class="line">from Students  </span><br><span class="line">where Sdept=‘CS’  </span><br><span class="line">and Sage &gt; 19;</span><br></pre></td></tr></table></figure>
+<h4 id="三嵌套查询"><a class="markdownIt-Anchor" href="#三嵌套查询">#</a> 三，嵌套查询</h4>
+<p>在 SQL 中，一个 <code>SELECT-FROM-WHERE</code>  语句称为一个<strong>查询块</strong>，<strong>将一个查询块嵌套在另一个查询块的 WHERE 子句或 HAVING 短语的条件中的查询称之为嵌套查询。比如:</strong> 内层循环查出来的是符合 <code>Cno=2</code>  的 <code>Sno</code>  集合，外层循环则在该集合内查询是否有满足的 <code>Sno</code> ，有的话显示 <code>Sname</code>  即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECT Sname //外层查询</span><br><span class="line">FROM Student</span><br><span class="line">WHERE Sno IN</span><br><span class="line">	(</span><br><span class="line">		SELECT Sno //内层查询</span><br><span class="line">		FROM SC</span><br><span class="line">		WHERE Cno=&#x27;2&#x27;</span><br><span class="line">	)</span><br></pre></td></tr></table></figure>
+<p>需要注意下面几点：</p>
+<ul>
+<li><strong>子查询的 SELECT 语句不能使用 <code>ORDER BY</code>  子句</strong></li>
+<li><strong>嵌套查询往往可以转换为对应的连接运算</strong><br>
+嵌套查询分为不相关子查询和相关子查询。</li>
+<li>不相关子查询：求解方法由里向外</li>
+<li>相关子查询：求解方法由外向里<br>
+<strong> (1) 带有 IN 谓词的子查询</strong><br>
+<strong>语法：嵌套查询中，子查询的结果往往是一个集合，所以 IN 在嵌套查询中使用次数最为频繁</strong><br>
+例子：查询与 “刘晨” 在同一个系学习的学生</li>
+<li>考虑时可以由内向外，<strong>先查询出刘晨所在的系，然后在该集合中查询满足该集合的学生姓名</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT student.Sno,Sname,Sdept FROM student WHERE Sdept IN</span><br><span class="line">(SELECT Sdept FROM student WHERE Sname=&#x27;刘晨&#x27;);</span><br></pre></td></tr></table></figure>
+<p>当然嵌套查询也可以转为<strong>连接</strong>完成：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT S1.Sno,S1.Sname,S1.Sdept</span><br><span class="line">FROM Student S1,Student S2</span><br><span class="line">WHERE S1.Sdept=S2.Sdept AND S2.Sname=&#x27;刘晨&#x27;;</span><br></pre></td></tr></table></figure>
+<p><strong>(2) 带有比较运算符的子查询</strong><br>
+<strong>语法：带有比较运算符的子查询是指父查询与子查询之间用比较运算符进行连接。当用户能确切知道内层查询返回的是单个值时，可以使用 <code>&gt;</code> 、 <code>&lt;</code> 、 <code>=</code> 、 <code>&gt;=</code> 、 <code>&lt;=</code> 、 <code>!=</code>  等比较运算符</strong><br>
+例子：查询与 “刘晨” 在同一个系学习的学生</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT Sno,Sname,Sdept FROM student WHERE Sdept</span><br><span class="line">= (SELECT Sdept FROM student WHERE Sname=&#x27;刘晨&#x27;);</span><br></pre></td></tr></table></figure>
+<p><strong>（3）带有 ANY（SOME）或 ALL 谓词的子查询</strong><br>
+<strong>语法：内层查询返回单个值时使用比较运算符。如果返回多个值要用 <code>ANY</code> （有的是 SOME）或 <code>ALL</code> ，然后同时使用比较运算符</strong><br>
+<img src="https://img-blog.csdnimg.cn/c5550c56e34f4b0bac6f2ce4899ad1c5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5b-r5LmQ5rGf5rmW,size_20,color_FFFFFF,t_70,g_se,x_16" alt="样例"><br>
+例子：查询其他系比计算机科学系<strong>任意</strong>一个学生年龄小的学生姓名和年龄</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SELECT Sname,Sage FROM student WHERE Sage &lt; ANY</span><br><span class="line">	(SELECT Sage FROM student WHERE Sdept=&#x27;CS&#x27;)</span><br><span class="line">AND Sdept!=&#x27;CS&#x27;;   </span><br><span class="line">-- &lt; ANY 等价于 &lt; MAX  其等价写法如下</span><br><span class="line">SELECT Sname,Sage FROM student WHERE Sage &lt;</span><br><span class="line">	(SELECT MAX(Sage) FROM student WHERE Sdept=&#x27;CS&#x27;)</span><br><span class="line">AND Sdept!=&#x27;CS&#x27;;</span><br></pre></td></tr></table></figure>
+<p><strong>（4）带有 EXISTS 谓词的子查询</strong><br>
+<strong>语法</strong>：EXISTS 代表存在量词，其不返回任何数据，只返回 <code>TRUE</code>  或者 <code>FALSE</code> 。另外，由 EXISTS 引出的子查询，其目标列表达式都是 *，因为列名没有意义。（写啥都行 1 也行)</p>
+<ul>
+<li>若内层查询结果非空，则外层 WHERE 子句返回 <code>true</code></li>
+<li>若内层查询结果为空，则外层 WHERE 子句返回 <code>false</code> <br>
+ 与之相反的有  <code>NOT EXISTS</code> 。<br>
+<strong>需要注意的是，一些带有 EXISTS 和 NOT EXISTS 谓词的子查询不能被其他形式的子查询等价替换；但是所有带 IN 谓词，比较运算符，ANY 和 ALL 谓词的子查询都可以用带 EXISTS 谓词的子查询替换</strong><br>
+例子：查询所有选修了 1 号课程的学生姓名</li>
+<li>处理时，首先会取外层查询中 <code>Student</code>  表的第一个元组，根据它与内层查询相关的属性值（ <code>Sno</code> ）处理内层查询，若 <code>WHERE</code>  子句返回为 <code>true</code>  则取外层查询中该元组的 <code>Sname</code>  放入结果表</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT Sname FROM student WHERE </span><br><span class="line">EXISTS</span><br><span class="line">(SELECT * from sc where Sno=student.Sno AND Cno=&#x27;1&#x27;);</span><br></pre></td></tr></table></figure>
+<p>例子 2：查询一个学生选修了所有的课程<br>
+着等价于：<strong>查询这样一个学生，没有一门课它是不选的</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SELECT Sname FROM Student WHERE NOT EXISTS(</span><br><span class="line">	SELECT * FROM Course WHERE NOT EXISTS(SELECT * FROM SC </span><br><span class="line">		WHERE Sno = Stident.Sno</span><br><span class="line">		AND Cno = Course.Cno</span><br><span class="line">	)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="数据更新"><a class="markdownIt-Anchor" href="#数据更新">#</a> 数据更新</h3>
+<h5 id="一插入数据"><a class="markdownIt-Anchor" href="#一插入数据">#</a> 一，插入数据</h5>
+<p><strong>语法：格式如下，用于将新元组插入指定表中。需要注意</strong></p>
+<ul>
+<li><code>INTO</code>  子句中没有出现的属性列，新元组在这些列上将会取 <code>NULL</code></li>
+<li>若 <code>INTO</code>  子句中没有指明任何属性列名，则新插入的元祖必须在每个属性列上均有值<br>
+<img src="https://img-blog.csdnimg.cn/93a441256646481a9039e63212692a3b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5b-r5LmQ5rGf5rmW,size_20,color_FFFFFF,t_70,g_se,x_16" alt="插入"><br>
+例子：将一个新学生元组 <strong>（学号：200215128；姓名：陈冬；性别：男；所在系：IS；年龄：18 岁）</strong> 插入到 Student 表中</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT</span><br><span class="line">INTO student(Sno,Sname,Ssex,Sdept,Sage)</span><br><span class="line">VALUES(&#x27;201215128&#x27;,&#x27;陈冬&#x27;,&#x27;男&#x27;,&#x27;IS&#x27;,18);</span><br></pre></td></tr></table></figure>
+<p>插入多条记录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">INSERT </span><br><span class="line">INTO student </span><br><span class="line">VALUES </span><br><span class="line">(201515000,&#x27;小赵&#x27;,&#x27;男&#x27;,30,&#x27;IS&#x27;)，</span><br><span class="line">(201515001,&#x27;小钱&#x27;,&#x27;女&#x27;,28,&#x27;MA&#x27;)，</span><br><span class="line">(201515002,&#x27;小孙&#x27;,&#x27;男&#x27;,33,&#x27;MJ&#x27;)，</span><br><span class="line">(201515003,&#x27;小李&#x27;,&#x27;女&#x27;,25,&#x27;CS&#x27;)，</span><br><span class="line">(201515004,&#x27;小周&#x27;,&#x27;男&#x27;,41,&#x27;LI&#x27;);</span><br></pre></td></tr></table></figure>
+<h5 id="二修改数据-update"><a class="markdownIt-Anchor" href="#二修改数据-update">#</a> 二，修改数据 (UPDATE)</h5>
+<p><strong>语法：格式如下，其功能是修改指定表中满足 <code>WHERE</code>  子句条件的元组</strong></p>
+<ul>
+<li>如果省略 WHERE 子句，则表示要修改表中所有元组<br>
+<img src="https://img-blog.csdnimg.cn/ae9586d56ff742f4b98bbcdef7722ac6.png" alt="修改数据"><br>
+例子：将学生 201215121 的年龄改为 22 岁</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE student</span><br><span class="line">set Sage=22</span><br><span class="line">WHERE Sno=&#x27;201215121&#x27;;</span><br></pre></td></tr></table></figure>
+<p>修改多个元组的值：将所有学生的年龄增加一岁</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">UPDATE student</span><br><span class="line">set Sage=Sage+1;</span><br></pre></td></tr></table></figure>
+<h5 id="三删除数据-delete"><a class="markdownIt-Anchor" href="#三删除数据-delete">#</a> 三，删除数据 (DELETE)</h5>
+<p><strong>语法：格式如下，其功能是从指定表中删除满足 <code>WHERE</code>  子句条件的所有元组，注意</strong></p>
+<ul>
+<li><code>DELETE</code>  删除的是表的数据，而不是表的定义</li>
+<li>如果省略 <code>WHERE</code>  子句，那么就表示删除全部元组<br>
+<img src="https://img-blog.csdnimg.cn/e45c2afc96444072be578fdaa0d0cb17.png" alt="删除数据"><br>
+<strong>注意事项：在进行数据库数据的更新时，需要保证数据库的一致性，以及约束条件</strong></li>
+</ul>
+<h3 id="视图"><a class="markdownIt-Anchor" href="#视图">#</a> 视图</h3>
+<h5 id="一关于视图"><a class="markdownIt-Anchor" href="#一关于视图">#</a> 一，关于视图</h5>
+<p>【定义】视图是一个<strong>虚表</strong>，其本质就是一条 <code>SELECT</code>  语句，而查询结果被赋予了一个名字，也即视图名字。或者说视图本身不包含任何数据，它只包含映射到基表的一个查询语句，当基表数据发生变化时，视图数据也随之变化。其目的就是在于方便，简化数据操作。<br>
+<strong>视图的作用：</strong></p>
+<ul>
+<li>视图能够简化用户的操作</li>
+<li>视图使用户能以多种角度看待同一数据</li>
+<li>视图对重构数据库提供了一定程度的逻辑独立性</li>
+<li>视图能够对机密数据提供安全保护</li>
+<li>适当的利用视图可以更清晰的表达查询</li>
+</ul>
+<h5 id="二视图的定义和删除"><a class="markdownIt-Anchor" href="#二视图的定义和删除">#</a> 二：视图的定义和删除</h5>
+<p><strong>1, 视图的定义</strong><br>
+<strong>语法：使用 <code>CREATE VIEW</code>  语句创建视图，格式如下</strong><br>
+<img src="https://img-blog.csdnimg.cn/35453393eb694f159939b678b6dd963f.png" alt="建立视图"></p>
+<ul>
+<li>子查询可以是<strong>任意的 <code>SELECT</code>  语句</strong>（是可以含有 <code>ORDER BY</code>  子句和 <code>DISTINCT</code>  短语取决于具体系统）</li>
+<li>组成视图的属性列名<strong>要么全部省略要么全部指定，不能有第三种情况</strong></li>
+<li>如果省略视图列名，则其列名默认由 <strong> <code>SELECT</code>  子句目标列诸字段组成</strong><br>
+例子：建立信息系 IS 学生的视图</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE VIEW IS_student</span><br><span class="line">AS </span><br><span class="line">SELECT Sno,Sname,Sage,Sdept</span><br><span class="line">FROM student</span><br><span class="line">WHERE Sdept=&#x27;IS&#x27;</span><br></pre></td></tr></table></figure>
+<p>视图也可以基于多个表，同一，视图可以基于视图创建，也可以带有表达式。<br>
+例子：定义一个反映学生出生年份的视图</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE VIEW birthday(Sno,Sname,Syear)</span><br><span class="line">AS</span><br><span class="line">SELECT Sno,Sname,2022-Sage</span><br><span class="line">FROM student;</span><br></pre></td></tr></table></figure>
+<p><strong>注意：在定义视图时如果有  <code>WITH CHECK OPTION</code>  子句，则在对视图进行 UPDATE,INSERT,DELETE 时要保证更新，插入，删除的行满足视图定义的谓词条件。</strong><br>
+<strong>2，视图的删除</strong></p>
+<ul>
+<li>基本表删除之后，由该基本表导出的所有视图均无法使用，<strong>但是视图的定义没有从字典中清除</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP VIEW &lt;视图名&gt; [CASCADE];</span><br></pre></td></tr></table></figure>
+<h5 id="三视图的查询"><a class="markdownIt-Anchor" href="#三视图的查询">#</a> 三，视图的查询</h5>
+<p><strong>语法：从用户角度出发，查询视图和查询基本表相同；从 DBMS 角度出发，采用视图消解法，具体来讲</strong></p>
+<ul>
+<li>首先进行<strong>有效性检查</strong></li>
+<li>接着转换成<strong>等价的</strong>对基本表的查询</li>
+<li>最后执行<strong>修正</strong>后的查询</li>
+</ul>
+<h5 id="四视图的更新"><a class="markdownIt-Anchor" href="#四视图的更新">#</a> 四，视图的更新</h5>
+<p><strong>语法：视图是虚表，所以对视图的更新最终会转化为对基本表的更新。为了防止用户通过视图对数据进行更新时，有意或无意地对不属于视图范围内的基本表数据进行操作，可以在定义视图时加上 <code>WITH CHECK OPTION</code>  子句。这样在更新时，如果不满足条件，DBMS 会拒绝操作</strong><br>
+<strong>（1）UPDATE</strong><br>
+ 例如：如果在定义视图 <code>is_student</code>  在定义时加入了 <code>WITH CHECK OPTION</code>  子句，接着再执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE is_student</span><br><span class="line">SET Sdept=&#x27;MA&#x27;</span><br><span class="line">WHERE Sno=&#x27;201215125&#x27;;</span><br></pre></td></tr></table></figure>
+<p>那么在更新时如果将 <code>Sdept</code>  字段改为了’MA’或其他值，DBMS 就会拒绝执行。<br>
+<strong>（2）INSERT</strong><br>
+ 向信息系学生视图 <code>IS_Student</code>  中插入一个新的学生记录：201215129，赵新，20 岁</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO is_student</span><br><span class="line">VALUES(&#x27;201215129&#x27;,&#x27;赵新&#x27;,20);</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/3df7025dcf304f8d85098a071791c41e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5b-r5LmQ5rGf5rmW,size_20,color_FFFFFF,t_70,g_se,x_16" alt="插入操作"></p>
+<ul>
+<li>这里视图没有数据，且 20 插入到了错误的地方（如果没有 <code>WITH CHECK OPTION</code>  就会导致这些错误出现）</li>
+<li>如果假如了 <code>WITH CHECK OPTION</code> ，那么 DBMS 会拒绝执行<br>
+<strong>（3）DELETE</strong><br>
+ 删除数据时，有没有 <code>WITH CHECK OPTION</code>  是一样的。</li>
+</ul>
+<h1 id="四数据库完整性"><a class="markdownIt-Anchor" href="#四数据库完整性">#</a> 四，数据库完整性</h1>
+<p>【定义】数据库完整性是指数据的正确性和相容性。</p>
+<ul>
+<li><strong>正确性</strong>：数据是符合现实世界语义、反映当前实际状况的。例如性别只能是男或女</li>
+<li><strong>相容性</strong>：是指数据库同一对象在不同关系表中的数据是符合逻辑的。比如说年龄一般都在 1-100 岁，当然也有超过一百岁的，反正没有两百岁，三百岁成仙的人类<br>
+<strong>数据库完整性和安全性的区别：</strong></li>
+<li><strong>完整性</strong>：是为了防止数据库中存在<strong>不符合语义的数据</strong>，也就是防止数据库中存在<strong>不正确的数据</strong>。因此，完整性检查和控制的防范对象是<strong>不合语义的、不正确的数据，防止它们进入数据库</strong></li>
+<li><strong>安全性</strong>：是保护数据库<strong>防止恶意破坏和非法存取</strong>。因此，安全性控制的防范对象是<strong>非法用户和非法操作，防止他们对数据库数据的非法存取</strong><br>
+ ** 为维护完整性 DBMS 必须要实现的功能</li>
+<li>提供定义完整性约束条件的机制</li>
+<li>提供完整性检查的方法</li>
+<li>进行违约处理</li>
+</ul>
+<h3 id="数据库三大完整性"><a class="markdownIt-Anchor" href="#数据库三大完整性">#</a> 数据库三大完整性</h3>
+<h4 id="一实体完整性"><a class="markdownIt-Anchor" href="#一实体完整性">#</a> 一，实体完整性</h4>
+<p>若属性 A 时基本关系 R 的<strong>主属性</strong>，则属性 A<strong> 不能取空值</strong><br>
+<strong>（1）定义实体完整性</strong><br>
+定义方法：关系模型的实体完整性在 <code>CREATE TABLE</code>  中用 <code>PRIMARY KEY</code>  定义。注意：</p>
+<ul>
+<li><strong>如果主码仅有一个属性（单属性）</strong>：可以定义为<strong>列级约束条件</strong>也可以定义为<strong>表级约束条件</strong></li>
+<li><strong>如果主码有多个属性</strong>：注意<strong>仅能定义为表级约束条件</strong><br>
+<strong>（2）实体完整性的检查和违约处理</strong></li>
+<li><strong>检查主码值是否唯一，如果不唯一则拒绝插入或修改</strong></li>
+<li><strong>检查主码的各个属性是否为空，只要有一个为空就拒绝插入或修改</strong><br>
+<strong>其中检查记录中主码值是否唯一有两种方法：</strong></li>
+<li>全表扫描：十分耗时</li>
+<li>建立索引：关系数据库管理系统一般都会在主码上自动建立一个索引</li>
+</ul>
+<h4 id="二参照完整性"><a class="markdownIt-Anchor" href="#二参照完整性">#</a> 二，参照完整性</h4>
+<p><strong>（1）定义参照完整性</strong><br>
+<strong>定义方法：关系模型的参照完整性在 <code>CREATE TABLE</code>  中用 <code>FOREIGN KEY</code>  定义，同时用 <code>REFERENCES</code>  短语指明这些外码参照哪些表的主码</strong><br>
+定义 <code>sc</code>  表的时候，其 <code>(Sno,Cno)</code>  是主码，分别参照 <code>Sudent</code>  的主码和 <code>Course</code>  表的主码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE SC</span><br><span class="line">(</span><br><span class="line">	Sno CHAR(9) NOT NULL,</span><br><span class="line">	Sno CHAR(4) NOT NULL,</span><br><span class="line">	Grade SMALLINT,</span><br><span class="line">	</span><br><span class="line">	PRIMARY KEY(Sno,Cno),</span><br><span class="line">	FOREIGN KEY(Sno) REFERENCES Student(Sno),</span><br><span class="line">	FOREIGN KEY(Cno) REFERENCES Course(Cno)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p><strong>（2）参照完整性检查和违约处理</strong><br>
+<strong> A：破坏完整性的行为</strong><br>
+参照完整性将表与表联系在了一起，所以对其中一个表的修改很可能会影响到另外一张表。举个例子，被参照表是 <code>Student</code> ，参照表是 <code>sc</code> ，破坏参照完整性的行为及其违约处理如下表所示：<br>
+<img src="https://img-blog.csdnimg.cn/e4864b3c42ec4a80bda80abd90f6e55e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5b-r5LmQ5rGf5rmW,size_20,color_FFFFFF,t_70,g_se,x_16" alt="参照完整性"><br>
+<strong>对于参照表 <code>sc</code>  的行为：</strong></p>
+<ul>
+<li><strong>向 <code>sc</code>  表（参照表）中插入一个元组，这是会被拒绝的</strong>。因为有可能你所插入的元组的 <code>Sno</code> （外码）无法在 <code>Student</code>  表中找到，这就意味着在成绩表中插入了一个非本班同学的成绩，这显然是不合理的</li>
+<li><strong>修改 <code>sc</code>  表（参照表）中的一个元组，这是会被拒绝的</strong>。因为有可能你会修改该元组的 <code>Sno</code> （外码），这就可能导致 <code>Sno</code>  无法在 <code>Student</code>  表中找到。</li>
+<li><strong>删除 <code>sc</code>  表（参照表）中的一个元组，这是可行的</strong>。因为它无非就是一条成绩信息。<br>
+<strong>对于被参照 <code>Student</code>  的行为：</strong></li>
+<li><strong>删除 <code>Student</code>  表（被参照表）中的一个元组，这是会被拒绝（也有可能级联删除或设为 <code>NULL</code> ）的</strong>。因为删除一个元组后，该元组所对应的 <code>Sno</code> （主码）将不复存在，这就有可能导致 <code>sc</code>  表（参照表）中某些元组的 <code>Sno</code> （外码）在 <code>Student</code>  表中找不到。当然可以级联删除将 SC 表的相关内容一起删除。</li>
+<li><strong>修改 <code>Student</code>  表（被参照表）中的一个元组，这是会被拒绝（也有可能级联删除或设为 <code>NULL</code> ）的</strong> 。因为一旦修改了该元组的 <code>Sno</code>  属性，就会发生和上面一样的问题。可以进行级联修改，这回导致 SC 表中的数据也被修改</li>
+<li><strong>向 <code>Student</code>  表（被参照表）插入一个元组，这是可行的</strong>。因为它无非就是一个新同学嘛<br>
+<strong> B，违约处理措施</strong><br>
+①拒绝：不允许操作，为默认策略<br>
+②级联：上述提到了。级联删除或修改会影响到其他与他相关的表的数据。<br>
+③设为空值：当删除或修改 <code>专业</code> 表（被参照表）的一个元组时造成了不一致，则<strong>将 <code>学生</code> 表（参照表）中的所有造成不一致的元组的对应属性（专业号）设为空值</strong></li>
+<li>比如删除 <code>专业</code> 表中专业号为 12 的专业，那么接着就要把 <code>学生</code> 表中专业号 = 12 的所有元组的专业号设置为空值<br>
+<strong> C：SQL 实现</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE SC</span><br><span class="line">(</span><br><span class="line">	Sno CHAR(9)</span><br><span class="line">	Sno CHAR(4) </span><br><span class="line">	Grade SMALLINT,//是外码也是主码，故不能取空值，实体完整性</span><br><span class="line">	PRIMARY KEY(Sno,Cno),</span><br><span class="line">	FOREIGN KEY(Sno) REFERENCES Student(Sno)</span><br><span class="line">		ON DELETE CASCADE //删除Student表的元组时，级联删除本表相应元组</span><br><span class="line">		ON UPDATE CASCADE, //更新Student表中的Sno时，级联更新本表相应元组</span><br><span class="line">	FOREIGN KEY(Cno) REFERENCES Course(Cno)</span><br><span class="line">		ON DELETE NO ACTION //删除Course表的元组造成不一致时，拒绝执行</span><br><span class="line">		ON UPDATE CASCADE //更新Course表中的Cno时，级联更新本表相应元组</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h4 id="三用户自定义完整性"><a class="markdownIt-Anchor" href="#三用户自定义完整性">#</a> 三，用户自定义完整性</h4>
+<p>用户自定义完整性针对某一具体关系数据库的约束条件，反映<strong>某一具体应用所涉及的数据必须满足的语义要求</strong><br>
+<strong>（1）属性上的约束条件</strong><br>
+<strong> A: 不允许取空值 (NOT NULL)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE SC</span><br><span class="line">(</span><br><span class="line">	Sno CHAR(9),</span><br><span class="line">	Cno CHAR(4),</span><br><span class="line">	Grade SMALLINT NOT NULL,</span><br><span class="line">	PRIMARY KEY(Sno,Cno)//定义了实体完整性，隐含了不允许取空值，在列级中可不写</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p><strong>B：列值唯一（UNIQUE）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE DEPT</span><br><span class="line">(</span><br><span class="line">	Deptno NUMERIC(2),</span><br><span class="line">	Dname CHAR(9) UNIQUE NOT NULL, //唯一且不能取空值</span><br><span class="line">	Location CHAR(10),</span><br><span class="line">	PRIMARY KEY(Depto)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p><strong>C：满足指定条件（CHECK）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE Student</span><br><span class="line">(</span><br><span class="line">	Sno CHAR(9) PRIMARY KEY,</span><br><span class="line">	Sname CHAR(8) NOT NULL,</span><br><span class="line">	Ssex CHAR(2) CHECK(Ssex IN (&#x27;男&#x27;,&#x27;女&#x27;)),</span><br><span class="line">	Sage SMALLINT,</span><br><span class="line">	Sdept CHAR(20)</span><br><span class="line">);</span><br><span class="line">-------------------------------------------</span><br><span class="line">CREATE TABLE SC</span><br><span class="line">(</span><br><span class="line">	Sno CHAR(9),</span><br><span class="line">	Cno CHAR(4),</span><br><span class="line">	Grade SMALLINT CHECK(Grade &gt;= 0 AND Grade &lt;= 100),</span><br><span class="line">	</span><br><span class="line">	PRIMARY KEY(Sno,Cno),</span><br><span class="line">	FOREIGN KEY(Sno) REFERENCES Student(Sno),</span><br><span class="line">	FOREIGN KEY(Cno) REFERENCES Course(Cno)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p><strong>（2）元组上的约束条件</strong><br>
+同属性值限制相比，元组级的限制可以设置<strong>不同属性之间</strong>的取值的相互约束条件<br>
+如，规定插入男性时，其名字不能以 <code>Ms.</code>  开头</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE Student</span><br><span class="line">(</span><br><span class="line">	Sno Char(9),</span><br><span class="line">	Sname CHAR(8) NOT NULL,</span><br><span class="line">	Ssex CHAR(2),</span><br><span class="line">	Sage SMALLINT,</span><br><span class="line">	Sdept CHAR(20),</span><br><span class="line">	PRIMARY KEY(Sno),</span><br><span class="line"></span><br><span class="line">	CHECK(Ssex=&#x27;女&#x27; OR Sname NOT LIKE &#x27;Ms.%&#x27;)</span><br><span class="line"></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h3 id="约束命名子句断言和触发器"><a class="markdownIt-Anchor" href="#约束命名子句断言和触发器">#</a> 约束命名子句，断言和触发器</h3>
+<p><s>这里老师的 PPT 似乎没有讲，先放一放，先找讲过的复习</s> ：）</p>
+<h1 id="五数据库安全性"><a class="markdownIt-Anchor" href="#五数据库安全性">#</a> 五，数据库安全性</h1>
+<p>【定义】保护数据库以防止不合法使用所造成的数据泄露，更改或者破坏</p>
+<h3 id="数据库安全性概述"><a class="markdownIt-Anchor" href="#数据库安全性概述">#</a> 数据库安全性概述</h3>
+<h4 id="一数据库的不安全因素"><a class="markdownIt-Anchor" href="#一数据库的不安全因素">#</a> 一，数据库的不安全因素</h4>
+<p><strong>1. 非授权用户对数据库的恶意存取和破坏:<strong> 一些</strong>黑客</strong>和<strong>犯罪分子</strong>在用户存取数据库时猎取用户名和用户口令，然后<strong>假冒</strong>合法用户偷取、修改甚至破坏用户数据。防范措施有:</p>
+<ul>
+<li><strong>用户身份鉴别</strong></li>
+<li><strong>存取控制</strong></li>
+<li><strong>视图</strong><br>
+<strong> 2. 数据库中重要或敏感的数据被泄露:</strong> <strong>黑客和敌对分子</strong>千方百计盗窃数据库中的重要数据，一 - 些机密信息被暴露。防范措施有</li>
+<li><strong>强制存取控制</strong></li>
+<li><strong>数据加密存储</strong></li>
+<li><strong>加密传输</strong><br>
+<strong> 3. 安全环境的脆弱性</strong></li>
+</ul>
+<h4 id="二数据库安全性控制"><a class="markdownIt-Anchor" href="#二数据库安全性控制">#</a> 二：数据库安全性控制</h4>
+<p><strong>数据库安全性控制的常用方法：</strong></p>
+<ul>
+<li>用户标识和鉴定（Identification &amp; Authentication）: 系统提供的最外层安全保护措施</li>
+<li>存取控制：访问权限</li>
+<li>通过视图调整授权 ：定义可向用户授权数据库特定部分的用户视图</li>
+<li>审计：追踪信息，重现导致数据库现有状况的一系列事件</li>
+<li>密码存储：使用加密技术保护机密数据</li>
+</ul>
+<h5 id="1用户身份鉴别"><a class="markdownIt-Anchor" href="#1用户身份鉴别">#</a> 1，用户身份鉴别</h5>
+<p><strong>每个用户在系统中都有一个用户标识。每个用户标识由用户名（user name）和用户标识号（UID）组成。系统内部记录着所有合法用户的标识，每次用户进入系统时，系统会核对用户的身份，只有通过鉴定后才提供相关数据库管理系统的权限</strong><br>
+<strong>（1）静态口令鉴别</strong><br>
+<strong>（2）动态口令鉴别</strong><br>
+<strong>（3）生物特征鉴别</strong><br>
+<strong>（4）智能卡鉴别</strong></p>
+<h5 id="2存取控制"><a class="markdownIt-Anchor" href="#2存取控制">#</a> 2，存取控制</h5>
+<p><strong>存取控制的目的就是确保只授权给有资格的用户访问数据库的权限，其余人等无法接近数据。主要包括以下两个部分</strong></p>
+<ul>
+<li><strong>定义用户权限</strong>：用户对某一数据对象的操作权力称为<strong>权限</strong>。某个用户应该具有何种权限是个<strong>管理问题和政策问题</strong>，而不是技术问题。数据库管理系统的功能是<strong>保证这些决定的执行</strong>。为此，数据库管理系统必须提供适当的语言来<strong>定义用户权限</strong>，这些定义经过编译后存储在数据字典中，被称做<strong>安全规则或授权规则</strong></li>
+<li><strong>合法权限检查</strong>：每当用户发出存取数据库的操作请求后 (请求一般应包括操作类型、操作对象和操作用户等信息)，数据库管理系统查找<a href="#lable">数据字典</a>，<strong>根据安全规则进行合法权限检查</strong>，若用户的操作请求超出了定义的权限，系统将<strong>拒绝执行此操作</strong><br>
+<strong>而存取控制方法又分为以下两类：</strong></li>
+</ul>
+<h6 id="1自主存取控制dac"><a class="markdownIt-Anchor" href="#1自主存取控制dac">#</a> （1）自主存取控制 DAC</h6>
+<p><strong>A，基本概念</strong><br>
+<strong>自主存取控制 DAC：SQL 中自主存取控制主要是通过 <code>GRANT</code>  语句和 <code>REVOKE</code>  语句来实现的。是指用户可以 “自主” 地决定将数据的存取权限授予何人、决定是否也将 “授权” 的权限授予别人。</strong><br>
+<strong>授权：用户权限由数据库对象和操作类型这两个要素组成。定义一个用户的存取权限就是定义这个用户可以在哪些数据对象上进行哪些类型的操作。所谓授权就是指定义存取权限</strong></p>
+<ul>
+<li>在<strong>非关系系统</strong>中，用户只能对<strong>数据</strong>进行操作，存取控制的数据库对象也仅限于数据本身</li>
+<li>在<strong>关系数据库系统</strong>中，存取控制的对象不仅有数据本身 (基本表中的数据、属性列上的数据），还有<strong>数据库模式 (包括数据库、基本表、视图和索引的创建等)</strong><br>
+ 下表就是<strong>关系数据库中的主要存取权限：</strong><br>
+<img src="https://img-blog.csdnimg.cn/202afc8ee1314578ac465140b086d3af.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5b-r5LmQ5rGf5rmW,size_20,color_FFFFFF,t_70,g_se,x_16" alt="主要存取权限"></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://dagzi1231.github.io">Dagzi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://dagzi1231.github.io/2023/11/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/">https://dagzi1231.github.io/2023/11/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://dagzi1231.github.io" target="_blank">Dagzi's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/11/19/MarkDown%E8%AF%AD%E6%B3%95/" title="MarkDown语法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">MarkDown语法</div></div></a></div><div class="next-post pull-right"><a href="/2023/11/15/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" title="算法学习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">算法学习</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Dagzi</div><div class="author-info__description">hello!</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/dagzi1231"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E7%BB%AA%E8%AE%BA"><span class="toc-number">1.</span> <span class="toc-text"> 一，绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.1.</span> <span class="toc-text"> 介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 数据库系统概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE"><span class="toc-number">1.1.1.1.</span> <span class="toc-text"> 数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93-db"><span class="toc-number">1.1.1.2.</span> <span class="toc-text"> 数据库 DB</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F-dbms"><span class="toc-number">1.1.1.3.</span> <span class="toc-text"> 数据库管理系统 DBMS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F-dbs"><span class="toc-number">1.1.1.4.</span> <span class="toc-text"> 数据库系统 DBS</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E6%8A%80%E6%9C%AF%E7%9A%84%E5%8F%91%E5%B1%95"><span class="toc-number">1.1.2.</span> <span class="toc-text"> 数据管理技术的发展</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text"> 数据模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%BB%84%E6%88%90%E5%85%83%E7%B4%A0"><span class="toc-number">1.2.0.1.</span> <span class="toc-text"> 数据模型的组成元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.2.0.2.</span> <span class="toc-text"> 概念模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E5%BE%97%E7%BB%84%E6%88%90%E8%A6%81%E7%B4%A0"><span class="toc-number">1.2.0.3.</span> <span class="toc-text"> 数据模型得组成要素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 数据库系统结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%BC%8F%E6%A6%82%E5%BF%B5"><span class="toc-number">1.2.1.1.</span> <span class="toc-text"> 数据库系统模式概念</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.</span> <span class="toc-text"> 二，关系数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB"><span class="toc-number">2.0.1.</span> <span class="toc-text"> 关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">2.0.1.1.</span> <span class="toc-text"> 概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A0%81"><span class="toc-number">2.0.1.2.</span> <span class="toc-text"> 码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E7%B1%BB%E5%85%B3%E7%B3%BB"><span class="toc-number">2.0.1.3.</span> <span class="toc-text"> 三类关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.0.1.4.</span> <span class="toc-text"> 关系模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.0.1.5.</span> <span class="toc-text"> 关系数据库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-number">2.0.2.</span> <span class="toc-text"> 关系的完整性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BD%93%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-number">2.0.2.1.</span> <span class="toc-text"> 实体完整性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E7%85%A7%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-number">2.0.2.2.</span> <span class="toc-text"> 参照完整性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%AE%9A%E4%B9%89%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-number">2.0.2.3.</span> <span class="toc-text"> 用户定义的完整性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0"><span class="toc-number">2.0.3.</span> <span class="toc-text"> 关系代数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E7%9A%84%E9%9B%86%E5%90%88%E8%BF%90%E7%AE%97"><span class="toc-number">2.0.3.1.</span> <span class="toc-text"> 传统的集合运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%93%E9%97%A8%E7%9A%84%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97"><span class="toc-number">2.0.3.2.</span> <span class="toc-text"> 专门的关系运算</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A0%87%E5%87%86%E8%AF%AD%E8%A8%80sql"><span class="toc-number">3.</span> <span class="toc-text"> 三，关系数据库标准语言 SQL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E6%A8%A1%E5%BC%8F%E5%BE%97%E5%AE%9A%E4%B9%89%E5%92%8C%E5%88%A0%E9%99%A4"><span class="toc-number">3.0.0.1.</span> <span class="toc-text"> 1，模式得定义和删除</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E5%9F%BA%E6%9C%AC%E8%A1%A8%E7%9A%84%E5%AE%9A%E4%B9%89%E5%88%A0%E9%99%A4%E5%92%8C%E4%BF%AE%E6%94%B9"><span class="toc-number">3.0.0.2.</span> <span class="toc-text"> 2，基本表的定义，删除和修改</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#span-idlable%E9%99%84%E5%8A%A0%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8span"><span class="toc-number">3.0.0.2.1.</span> <span class="toc-text"> 附加：数据字典</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%A1%A8%E7%9A%84%E6%9F%A5%E8%AF%A2"><span class="toc-number">3.0.1.</span> <span class="toc-text"> 基本表的查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E5%8D%95%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="toc-number">3.0.1.1.</span> <span class="toc-text"> 一，单表查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2%E6%9F%A5%E8%AF%A2%E6%97%B6%E6%B6%89%E5%8F%8A%E5%A4%9A%E5%BC%A0%E8%A1%A8"><span class="toc-number">3.0.1.2.</span> <span class="toc-text"> 二，连接查询（查询时涉及多张表）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E5%B5%8C%E5%A5%97%E6%9F%A5%E8%AF%A2"><span class="toc-number">3.0.1.3.</span> <span class="toc-text"> 三，嵌套查询</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0"><span class="toc-number">3.0.2.</span> <span class="toc-text"> 数据更新</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-number">3.0.2.0.1.</span> <span class="toc-text"> 一，插入数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE-update"><span class="toc-number">3.0.2.0.2.</span> <span class="toc-text"> 二，修改数据 (UPDATE)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%89%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE-delete"><span class="toc-number">3.0.2.0.3.</span> <span class="toc-text"> 三，删除数据 (DELETE)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%86%E5%9B%BE"><span class="toc-number">3.0.3.</span> <span class="toc-text"> 视图</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E5%85%B3%E4%BA%8E%E8%A7%86%E5%9B%BE"><span class="toc-number">3.0.3.0.1.</span> <span class="toc-text"> 一，关于视图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C%E8%A7%86%E5%9B%BE%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E5%88%A0%E9%99%A4"><span class="toc-number">3.0.3.0.2.</span> <span class="toc-text"> 二：视图的定义和删除</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%89%E8%A7%86%E5%9B%BE%E7%9A%84%E6%9F%A5%E8%AF%A2"><span class="toc-number">3.0.3.0.3.</span> <span class="toc-text"> 三，视图的查询</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9B%9B%E8%A7%86%E5%9B%BE%E7%9A%84%E6%9B%B4%E6%96%B0"><span class="toc-number">3.0.3.0.4.</span> <span class="toc-text"> 四，视图的更新</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-number">4.</span> <span class="toc-text"> 四，数据库完整性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%89%E5%A4%A7%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-number">4.0.1.</span> <span class="toc-text"> 数据库三大完整性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E5%AE%9E%E4%BD%93%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-number">4.0.1.1.</span> <span class="toc-text"> 一，实体完整性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8F%82%E7%85%A7%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-number">4.0.1.2.</span> <span class="toc-text"> 二，参照完整性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-number">4.0.1.3.</span> <span class="toc-text"> 三，用户自定义完整性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%A6%E6%9D%9F%E5%91%BD%E5%90%8D%E5%AD%90%E5%8F%A5%E6%96%AD%E8%A8%80%E5%92%8C%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="toc-number">4.0.2.</span> <span class="toc-text"> 约束命名子句，断言和触发器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-number">5.</span> <span class="toc-text"> 五，数据库安全性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7%E6%A6%82%E8%BF%B0"><span class="toc-number">5.0.1.</span> <span class="toc-text"> 数据库安全性概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%B8%8D%E5%AE%89%E5%85%A8%E5%9B%A0%E7%B4%A0"><span class="toc-number">5.0.1.1.</span> <span class="toc-text"> 一，数据库的不安全因素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7%E6%8E%A7%E5%88%B6"><span class="toc-number">5.0.1.2.</span> <span class="toc-text"> 二：数据库安全性控制</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD%E9%89%B4%E5%88%AB"><span class="toc-number">5.0.1.2.1.</span> <span class="toc-text"> 1，用户身份鉴别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6"><span class="toc-number">5.0.1.2.2.</span> <span class="toc-text"> 2，存取控制</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1%E8%87%AA%E4%B8%BB%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6dac"><span class="toc-number">5.0.1.2.2.1.</span> <span class="toc-text"> （1）自主存取控制 DAC</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/20/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93STL%EF%BC%88%E4%BB%8B%E7%BB%8D%EF%BC%89/" title="C++ STL 学习">C++ STL 学习</a><time datetime="2023-11-20T04:29:02.610Z" title="发表于 2023-11-20 12:29:02">2023-11-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/19/MarkDown%E8%AF%AD%E6%B3%95/" title="MarkDown语法">MarkDown语法</a><time datetime="2023-11-19T15:01:52.646Z" title="发表于 2023-11-19 23:01:52">2023-11-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/" title="数据库">数据库</a><time datetime="2023-11-17T09:59:31.981Z" title="发表于 2023-11-17 17:59:31">2023-11-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/15/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" title="算法学习">算法学习</a><time datetime="2023-11-15T15:39:26.772Z" title="发表于 2023-11-15 23:39:26">2023-11-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/13/DFS--%E5%A4%8D%E4%B9%A0/" title="DFS--复习">DFS--复习</a><time datetime="2023-11-13T10:06:06.350Z" title="发表于 2023-11-13 18:06:06">2023-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Dagzi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
