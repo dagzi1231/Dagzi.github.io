@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据科学导论+学习过程 | Dagzi's Blog</title><meta name="author" content="Dagzi"><meta name="copyright" content="Dagzi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="大概把这次作业 6 的实现过程记录一下吧，因为在过程中发现了很多数据分析很有用的一些知识，这里记录一下，以后可能会用到。 R 语言实战 - 基于 Logistic 回归模型的构建及验证 - 文章依据  R 语言 Logistic 回归～变量筛选  我该咋筛选变量进入多因素回归  logistics 回归建立预后模型过程中自变量太多，如何筛选？ 上面是学习过程中学习的文章。">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据科学导论+学习过程 | Dagzi's Blog</title><meta name="author" content="Dagzi"><meta name="copyright" content="Dagzi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="大概把这次作业 6 的实现过程记录一下吧，因为在过程中发现了很多数据分析很有用的一些知识，这里记录一下，以后可能会用到。 R 语言实战 - 基于 Logistic 回归模型的构建及验证 - 文章依据  R 语言 Logistic 回归～变量筛选  我该咋筛选变量进入多因素回归  logistics 回归建立预后模型过程中自变量太多，如何筛选？ 上面是学习过程中学习的文章。 具体流程如下： 使用的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据科学导论+学习过程">
 <meta property="og:url" content="https://dagzi1231.github.io/2023/12/12/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E5%AE%9E%E9%AA%8C/index.html">
 <meta property="og:site_name" content="Dagzi&#39;s Blog">
-<meta property="og:description" content="大概把这次作业 6 的实现过程记录一下吧，因为在过程中发现了很多数据分析很有用的一些知识，这里记录一下，以后可能会用到。 R 语言实战 - 基于 Logistic 回归模型的构建及验证 - 文章依据  R 语言 Logistic 回归～变量筛选  我该咋筛选变量进入多因素回归  logistics 回归建立预后模型过程中自变量太多，如何筛选？ 上面是学习过程中学习的文章。">
+<meta property="og:description" content="大概把这次作业 6 的实现过程记录一下吧，因为在过程中发现了很多数据分析很有用的一些知识，这里记录一下，以后可能会用到。 R 语言实战 - 基于 Logistic 回归模型的构建及验证 - 文章依据  R 语言 Logistic 回归～变量筛选  我该咋筛选变量进入多因素回归  logistics 回归建立预后模型过程中自变量太多，如何筛选？ 上面是学习过程中学习的文章。 具体流程如下： 使用的">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:published_time" content="2023-12-12T07:35:11.588Z">
-<meta property="article:modified_time" content="2023-12-12T07:38:54.552Z">
+<meta property="article:modified_time" content="2023-12-12T12:19:24.654Z">
 <meta property="article:author" content="Dagzi">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="机器学习">
@@ -57,7 +57,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-12-12 15:38:54'
+  postUpdate: '2023-12-12 20:19:24'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -155,13 +155,230 @@
       }
       detectApple()
     })(window)</script><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="Dagzi's Blog" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-spinner"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/3.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Dagzi's Blog"><span class="site-name">Dagzi's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-spinner"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据科学导论+学习过程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-12T07:35:11.588Z" title="发表于 2023-12-12 15:35:11">2023-12-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-12T07:38:54.552Z" title="更新于 2023-12-12 15:38:54">2023-12-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数据科学导论+学习过程"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>大概把这次作业 6 的实现过程记录一下吧，因为在过程中发现了很多数据分析很有用的一些知识，这里记录一下，以后可能会用到。<br>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-spinner"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/3.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Dagzi's Blog"><span class="site-name">Dagzi's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-spinner"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据科学导论+学习过程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-12T07:35:11.588Z" title="发表于 2023-12-12 15:35:11">2023-12-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-12T12:19:24.654Z" title="更新于 2023-12-12 20:19:24">2023-12-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数据科学导论+学习过程"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>大概把这次作业 6 的实现过程记录一下吧，因为在过程中发现了很多数据分析很有用的一些知识，这里记录一下，以后可能会用到。<br>
 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/629713770">R 语言实战 - 基于 Logistic 回归模型的构建及验证 - 文章依据</a><br>
 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/535482448"> R 语言 Logistic 回归～变量筛选 </a><br>
 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/31446651">我该咋筛选变量进入多因素回归</a><br>
 <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/36730804"> logistics 回归建立预后模型过程中自变量太多，如何筛选？</a><br>
-上面是学习过程中学习的文章。</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://dagzi1231.github.io">Dagzi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://dagzi1231.github.io/2023/12/12/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E5%AE%9E%E9%AA%8C/">https://dagzi1231.github.io/2023/12/12/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E5%AE%9E%E9%AA%8C/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://dagzi1231.github.io" target="_blank">Dagzi's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/12/12/%E4%BA%BA%E6%98%AF%E6%80%8E%E4%B9%88%E5%8F%98%E5%BC%BA%E7%9A%84/" title="人是怎么变强的"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">人是怎么变强的</div></div></a></div><div class="next-post pull-right"><a href="/2023/12/10/%E4%B8%BB%E6%88%90%E5%88%86%E6%9E%90+%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/" title="主成分析+奇异值分解"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">主成分析+奇异值分解</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/11/15/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" title="算法学习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-15</div><div class="title">算法学习</div></div></a></div><div><a href="/2023/11/25/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" title="人工智能的数学基础"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-25</div><div class="title">人工智能的数学基础</div></div></a></div><div><a href="/2023/12/10/%E4%B8%BB%E6%88%90%E5%88%86%E6%9E%90+%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/" title="主成分析+奇异值分解"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-10</div><div class="title">主成分析+奇异值分解</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Dagzi</div><div class="author-info__description">hello!</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/dagzi1231"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/12/%E4%BA%BA%E6%98%AF%E6%80%8E%E4%B9%88%E5%8F%98%E5%BC%BA%E7%9A%84/" title="人是怎么变强的">人是怎么变强的</a><time datetime="2023-12-12T07:35:35.000Z" title="发表于 2023-12-12 15:35:35">2023-12-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/12/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E5%AE%9E%E9%AA%8C/" title="数据科学导论+学习过程">数据科学导论+学习过程</a><time datetime="2023-12-12T07:35:11.588Z" title="发表于 2023-12-12 15:35:11">2023-12-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/10/%E4%B8%BB%E6%88%90%E5%88%86%E6%9E%90+%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/" title="主成分析+奇异值分解">主成分析+奇异值分解</a><time datetime="2023-12-10T11:48:40.239Z" title="发表于 2023-12-10 19:48:40">2023-12-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/25/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" title="人工智能的数学基础">人工智能的数学基础</a><time datetime="2023-11-25T08:05:16.625Z" title="发表于 2023-11-25 16:05:16">2023-11-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/20/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93STL%EF%BC%88%E4%BB%8B%E7%BB%8D%EF%BC%89/" title="C++ STL 学习">C++ STL 学习</a><time datetime="2023-11-20T04:29:02.610Z" title="发表于 2023-11-20 12:29:02">2023-11-20</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Dagzi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div>
+上面是学习过程中学习的文章。<br>
+具体流程如下：<br>
+使用的 R 语言包如下：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>library(mice)<br><br>library(autoReg)<br><br>library(rms)<br><br>library(caret)<br><br>library(pROC)<br><br>library(rmda)<br><br>library(dplyr)<br><br>library(rrtable)</td>
+</tr>
+</tbody>
+</table>
+<p>根据 PPT 提供的网址获取预处理过后的数据集 NatalRiskData.rData，进入 Rstudio 并使用 load 函数加载数据集。</p>
+<p>由于数据已经经过预处理，我们通过 skimr::skim (sdata) 可以对数据进行分析，分析结果如下：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>![](file:///C:/Users/GUOXIA~1/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)</td>
+</tr>
+</tbody>
+</table>
+<p>之后我们可以用 autoReg 包制作表格来展示各个分类变量的数据特征。</p>
+<blockquote>
+<p>ft &lt;- gaze(atRisk~.,data=sdata) %&gt;%myft()</p>
+</blockquote>
+<blockquote>
+<p>print(ft)</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>![Uploaded image](file:///C:/Users/GUOXIA~1/AppData/Local/Temp/msohtmlclip1/01/clip_image004.png)<br><br>PWGT: 可能代表体重（Pregnant Weight），可能是在特定的医疗背景下测量的体重，比如妊娠期体重。<br><br>UPREVIS: 可能代表了某种类型的修订或更新次数（Update Revisions），或者是预定的访问次数（Prenatal Visits）。<br><br>CIG_REC: 可能指的是吸烟记录（Cigarette Record），表示个体是否有吸烟的习惯。<br><br>GESTREC3: 这个变量可能与妊娠期（Gestation Record）有关，特别是与妊娠周期的长度有关。<br><br>DPLURAL: 可能代表的是出生时胎儿的数量（Delivery Plurality），如单胞胎、双胞胎或三胞胎及以上。<br><br>ULD_MECO: 可能代表的是与胎儿的粪便（Meconium）有关的紧急劳动解除（Urgent Labor Decisions Meconium）。<br><br>ULD_PRECIP: 可能指的是急速分娩（Urgent Labor Decisions Precipitate），即分娩过程异常迅速的情况。<br><br>ULD_BREECH: 可能指的是臀位分娩（Urgent Labor Decisions Breech），即胎儿在分娩时臀部或脚部先行的情况。<br><br>URF_DIAB: 可能代表妊娠期糖尿病（Urgent Risk Factor Diabetes）的记录。<br><br>URF_CHYPER: 可能代表妊娠期慢性高血压（Urgent Risk Factor Chronic Hypertension）的记录。<br><br>URF_PHYPER: 可能代表妊娠期短暂高血压（Urgent Risk Factor Preeclampsia Hypertension）的记录。<br><br>URF_ECLAM: 可能代表子痫前期（Urgent Risk Factor Eclampsia），这是一种怀孕晚期的高血压疾病。<br><br>DBWT: 可能代表出生时的体重（Delivery Birth Weight）。<br><br>ORIGRANDGROUP: 这个变量不太明确，但可能代表某个原始的随机分组（Original Random Group）。</td>
+</tr>
+</tbody>
+</table>
+<p>在建立测试集和训练集时，我们可以先对数据进变量筛选。这里我选择先单后多的变量筛选方式。如果某个变量单因素分析时 P &lt; 0.05 ，就纳入多因素模型。同样，我们可以直接利用 autoReg 包进行实现。</p>
+<p>我们先建立逻辑回归模型。</p>
+<blockquote>
+<p>mod &lt;- glm(atRisk~.,data = sdata,family = “binomial”)</p>
+</blockquote>
+<blockquote>
+<p>summary(mod)</p>
+</blockquote>
+<p>分析结果:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>![](file:///C:/Users/GUOXIA~1/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png)</td>
+</tr>
+</tbody>
+</table>
+<p>通过上图，我们发现 <strong>PWGT,UPREVIS,GESTREC3,ULD_MECO, ULD_BREECH, DBWT</strong> 这几个的 p 值都低于 0.05，故我们建立逻辑回归模型时可以将其纳入。</p>
+<p>之后，我们需要把数据分为训练集和测试集，在训练集中训练模型并在测试集中进行检验。</p>
+<blockquote>
+<p>set.seed(1234)</p>
+</blockquote>
+<blockquote>
+<p>ind &lt;- createDataPartition(sdata$atRisk,</p>
+</blockquote>
+<p>p=0.8,</p>
+<p>list = FALSE)</p>
+<blockquote>
+<p>train_data &lt;- sdata [ind,] # 训练集</p>
+</blockquote>
+<blockquote>
+<p>test_data &lt;- sdata [-ind,] # 测试集</p>
+</blockquote>
+<p>然后通过基于 rms 包构建 Logistic 回归模型的构建，绘制列线图和校准曲线。</p>
+<blockquote>
+<p>fit &lt;- lrm(atRisk~PWGT+UPREVIS+GESTREC3+ULD_MECO+ULD_BREECH+DBWT,</p>
+</blockquote>
+<p>data = train_data,x=TRUE,y=TRUE)</p>
+<blockquote>
+<p>fit</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>![](file:///C:/Users/GUOXIA~1/AppData/Local/Temp/msohtmlclip1/01/clip_image008.png)</td>
+</tr>
+</tbody>
+</table>
+<p>通过结果可以知道每个自变量对结果的影响。</p>
+<p>Intercept（截距）: -1.0618。这是当所有自变量值为 0 时，对数几率（log-odds）的估计值。</p>
+<p>PWGT: 0.0042。这意味着 PWGT 的每个单位增加，与被分类为 atRisk 相关的对数几率增加 0.0042。</p>
+<p>UPREVIS: -0.0318。这意味着 UPREVIS 的每个单位增加，与被分类为 atRisk 相关的对数几率减少 0.0318。</p>
+<p>GESTREC3=&lt; 37 weeks: 0.4968。这表明如果 GESTREC3 小于 37 周，则与被分类为 atRisk 相关的对数几率比 GESTREC3 大于等于 37 周的情况高 0.4968。</p>
+<p>ULD_MECO: 1.0680。这表示 ULD_MECO 为真时，与被分类为 atRisk 相关的对数几率比 ULD_MECO 为假时高 1.0680。</p>
+<p>ULD_BREECH: 0.3340。这表示 ULD_BREECH 为真时，与被分类为 atRisk 相关的对数几率比 ULD_BREECH 为假时高 0.3340。</p>
+<p>DBWT: -0.0012。这意味着 DBWT 的每个单位增加，与被分类为 atRisk 相关的对数几率减少 0.0012。</p>
+<p>通过图中可以知道伪 R - 平方的值为 0.144，![](file:///C:/Users/GUOXIA~1/AppData/Local/Temp/msohtmlclip1/01/clip_image010.png)，AIC 的值为 3353.608。</p>
+<p>之后进行预测并绘制 ROC 曲线。</p>
+<blockquote>
+<p>train_pred &lt;- predict(fit,</p>
+</blockquote>
+<p>newdata=train_data,</p>
+<p>type = “fitted”)</p>
+<blockquote>
+<p>test_pred &lt;- predict(fit,</p>
+</blockquote>
+<p>newdata=test_data,</p>
+<p>type=“fitted”)</p>
+<blockquote>
+<p>train_roc &lt;- roc(train_data$atRisk,train_pred)</p>
+</blockquote>
+<p>Setting levels: control = FALSE, case = TRUE</p>
+<p>Setting direction: controls &lt; cases</p>
+<blockquote>
+<p>auc(train_roc)</p>
+</blockquote>
+<p>Area under the curve: 0.7034</p>
+<blockquote>
+<p>plot(train_roc)</p>
+</blockquote>
+<blockquote>
+<p>test_roc &lt;- roc(test_data$atRisk,test_pred)</p>
+</blockquote>
+<p>Setting levels: control = FALSE, case = TRUE</p>
+<p>Setting direction: controls &lt; cases</p>
+<blockquote></blockquote>
+<blockquote>
+<p>auc(test_roc)</p>
+</blockquote>
+<p>Area under the curve: 0.7135</p>
+<blockquote>
+<p>plot(test_roc)</p>
+</blockquote>
+<p>![](file:///C:/Users/GUOXIA~1/AppData/Local/Temp/msohtmlclip1/01/clip_image012.png)</p>
+<p>Fit 模型训练集 ROC 曲线</p>
+<p>![](file:///C:/Users/GUOXIA~1/AppData/Local/Temp/msohtmlclip1/01/clip_image014.png)</p>
+<p>Fit 模型测试集 ROC 曲线</p>
+<p>我们通过 ROC 曲线来获取最佳阈值。</p>
+<blockquote>
+<p>coords_test &lt;- coords(test_roc, “best”)</p>
+</blockquote>
+<blockquote>
+<p>coords_test</p>
+</blockquote>
+<p>threshold specificity sensitivity</p>
+<p>1 0.02988667   0.9086334   0.4583333</p>
+<p>并根据此建立混淆矩阵计算精度，准确率和召回率以及 F-score。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&gt; predicted_labels_test &lt;- ifelse(test_pred &gt;= best_threshold,TRUE,FALSE)<br><br>&gt; confusion_matrix &lt;- table(predicted_labels_test, test_data$atRisk)<br><br>&gt; confusion_matrix<br><br>                     predicted_labels_test FALSE TRUE<br><br>                FALSE  4694   52<br><br>                TRUE    472   44<br><br>&gt; accuracy &lt;- (confusion_matrix[1, 1] + confusion_matrix[2, 2]) / sum(confusion_matrix)<br><br>&gt; recall &lt;- confusion_matrix[2, 2] / (confusion_matrix[2, 2] + confusion_matrix[2, 1])<br><br>&gt; cat(“Accuracy:”, accuracy, “\n”)<br><br>Accuracy: 0.9004181 <br><br>&gt; cat(“Recall:”, recall, “\n”)<br><br>Recall: 0.08527132 <br><br>&gt; precision &lt;- confusion_matrix[2, 2] / (confusion_matrix[2, 2] + confusion_matrix[1, 2])<br><br>&gt; f1_score &lt;- 2 * (precision * recall) / (precision + recall)<br><br>&gt; cat(“Precision:”, precision, “\n”)<br><br>Precision: 0.4583333 <br><br>&gt; cat(“F1 Score:”, f1_score, “\n”)<br><br>F1 Score: 0.1437908</td>
+</tr>
+</tbody>
+</table>
+<p>通过上述来看，筛选了一部分非显著性因素建立的模型精度较为高，但是召回率和准确率相对较低，这也导致了其 F-score 很低。这可能会导致很多漏判误判的情况。</p>
+<p>下面作出双密度图：</p>
+<blockquote>
+<p>test_data$pred &lt;- test_pred</p>
+</blockquote>
+<blockquote>
+<p>ggplot(data = test_data, aes(x = pred , fill = factor(atRisk))) +</p>
+</blockquote>
+<ul>
+<li>
+<p>geom_density(alpha = 0.5) +</p>
+</li>
+<li>
+<p>labs(x = “Predicted Probabilities”, y = “Density”) +</p>
+</li>
+<li>
+<p>ggtitle(“Dual Density Plot of Predicted Probabilities”)</p>
+</li>
+</ul>
+<p>![](file:///C:/Users/GUOXIA~1/AppData/Local/Temp/msohtmlclip1/01/clip_image016.png)</p>
+<p>Fit 模型预测双密度图</p>
+<p>可以看出图中有以下特征。</p>
+<p>“FALSE” 类的预测概率主要集中在 0 附近，这表明模型对于这类的预测非常有信心，认为它们几乎不可能是 “TRUE”。</p>
+<p>“TRUE” 类的预测概率分布则相对更平坦，但大多数预测值仍然靠近 0。</p>
+<p>在预测概率较低的区域（接近 0），两个分类的曲线有所重叠，这意味着在这些概率值下，模型在区分 “TRUE” 和 “FALSE” 上存在一定的不确定性。</p>
+<p>这里我也对先前建立的概括了全部因素的模型 mod 进行了相同的操作，分别对其在测试数据集下的性能做出了评价。</p>
+<p>![](file:///C:/Users/GUOXIA~1/AppData/Local/Temp/msohtmlclip1/01/clip_image018.png)</p>
+<p>Mod 模型测试集 ROC 曲线</p>
+<p>对其取最佳阈值并建立混淆矩阵查看</p>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&gt; coords_test_sum &lt;- coords(roc_curve, “best”)<br><br>&gt; coords_test_sum  <br><br>   threshold specificity sensitivity<br><br>1 0.01760564   0.7667441     0.59375<br><br>&gt; best_threshold_sum &lt;- 0.01760564<br><br>&gt; predicted_labels_test_sum &lt;- ifelse(sum_testpred &gt;= best_threshold_sum , TRUE, FALSE)<br><br>&gt; confusion_matrix_sum &lt;- table(predicted_labels_test_sum , test_data$atRisk)<br><br>&gt; confusion_matrix_sum <br><br>                         predicted_labels_test_sum FALSE TRUE<br><br>                    FALSE  3961   39<br><br>                    TRUE   1205   57<br><br>&gt; accuracy_sum &lt;- (confusion_matrix_sum [1, 1] + confusion_matrix_sum [2, 2]) / sum(confusion_matrix_sum )<br><br>&gt; accuracy_sum <br><br>[1] 0.763588<br><br>&gt; recall_sum &lt;- confusion_matrix_sum [2, 2] / (confusion_matrix_sum [2, 2] + confusion_matrix_sum [2, 1])<br><br>&gt; recall_sum<br><br>[1] 0.0451664</td>
+</tr>
+</tbody>
+</table>
+<p>可以发现其召回率和准确率相对于 Fit 模型都低，这里可以得出提取主要因素对模型的性能还是有一定程度上的优化的，如果能够筛选出最相关的因素进行建模，模型的性能也会一定程度的提升。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://dagzi1231.github.io">Dagzi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://dagzi1231.github.io/2023/12/12/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E5%AE%9E%E9%AA%8C/">https://dagzi1231.github.io/2023/12/12/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E5%AE%9E%E9%AA%8C/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://dagzi1231.github.io" target="_blank">Dagzi's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/12/12/%E4%BA%BA%E6%98%AF%E6%80%8E%E4%B9%88%E5%8F%98%E5%BC%BA%E7%9A%84/" title="人是怎么变强的"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">人是怎么变强的</div></div></a></div><div class="next-post pull-right"><a href="/2023/12/10/%E4%B8%BB%E6%88%90%E5%88%86%E6%9E%90+%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/" title="主成分析+奇异值分解"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">主成分析+奇异值分解</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/11/15/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" title="算法学习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-15</div><div class="title">算法学习</div></div></a></div><div><a href="/2023/12/15/LINUX%E5%AD%A6%E4%B9%A0/" title="LINUX学习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-15</div><div class="title">LINUX学习</div></div></a></div><div><a href="/2023/12/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E6%A6%82%E5%BF%B5/" title="计算机组成原理-概念"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-13</div><div class="title">计算机组成原理-概念</div></div></a></div><div><a href="/2023/11/25/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" title="人工智能的数学基础"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-25</div><div class="title">人工智能的数学基础</div></div></a></div><div><a href="/2023/12/10/%E4%B8%BB%E6%88%90%E5%88%86%E6%9E%90+%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/" title="主成分析+奇异值分解"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-10</div><div class="title">主成分析+奇异值分解</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Dagzi</div><div class="author-info__description">hello!</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/dagzi1231"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/29/%E7%B2%BE%E7%A5%9E%E5%86%85%E8%80%97/" title="精神内耗">精神内耗</a><time datetime="2023-12-29T09:43:12.322Z" title="发表于 2023-12-29 17:43:12">2023-12-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/15/LINUX%E5%AD%A6%E4%B9%A0/" title="LINUX学习">LINUX学习</a><time datetime="2023-12-15T15:41:21.709Z" title="发表于 2023-12-15 23:41:21">2023-12-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E6%A6%82%E5%BF%B5/" title="计算机组成原理-概念">计算机组成原理-概念</a><time datetime="2023-12-13T08:57:38.608Z" title="发表于 2023-12-13 16:57:38">2023-12-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/12/%E4%BA%BA%E6%98%AF%E6%80%8E%E4%B9%88%E5%8F%98%E5%BC%BA%E7%9A%84/" title="人是怎么变强的">人是怎么变强的</a><time datetime="2023-12-12T07:35:35.000Z" title="发表于 2023-12-12 15:35:35">2023-12-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/12/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E5%AE%9E%E9%AA%8C/" title="数据科学导论+学习过程">数据科学导论+学习过程</a><time datetime="2023-12-12T07:35:11.588Z" title="发表于 2023-12-12 15:35:11">2023-12-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Dagzi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div>
         <style>
             [bg-lazy] {
                 background-image: none !important;
